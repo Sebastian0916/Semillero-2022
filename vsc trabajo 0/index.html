@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="stylos.css">
+</head>
+<body>
+    <div class="content"></div>
+        <h1>CALCULATOR</h1>
+        <form name="textview">
+            <input class="textview" name="textview">
+        </form> 
+        <table>
+        <tr>
+            <td id="Primary"> <input class="Button" type="button" value="MU"></td>
+            <td id="Primary"> <input class="Button" type="button" value="%" onclick="insert('%')"></td>
+        </tr>
+        <tr>
+            <td id="Primary"><input class="Button" type="button" value="MC"></td>
+            <td id="Primary"><input class="Button" type="button" value="MR"></td>
+            <td id="Primary"><input class="Button" type="button" value="M-"></td>
+            <td id="Primary"><input class="Button" type="button" value="M+"></td>
+            <td id="Primary"><input class="Button" type="button" value="/" onclick="insert('/')"></td>
+        </tr>
+        <tr>
+            
+            <td id="Primary"><input class="Button" type="button" value="+/_" ></td>
+            <td id="secondcolor"><input class="Button" type="button" value="7" onclick="insert('7')"></td>
+            <td id="secondcolor"><input class="Button" type="button" value="8" onclick="insert('8')"></td>
+            <td id="secondcolor"><input class="Button" type="button" value="9" onclick="insert('9')"></td>
+            <td id="Primary"><input class="Button" type="button" value="X" onclick="insert('X')"></td>
+        </tr>
+        <tr>
+            <td id="Primary"><input class="Button" type="button" value="<"onclick="back()"></td>
+            <td id="secondcolor"><input class="Button" type="button" value="6" onclick="insert('6')"></td>
+            <td id="secondcolor"><input class="Button" type="button" value="5" onclick="insert('5')"></td>
+            <td id="secondcolor"><input class="Button" type="button" value="6" onclick="insert('4')"></td>
+            <td id="Primary"><input class="Button" type="button" value="-" ></td>
+        </tr>
+        <tr>
+            <td id="thirtcolor"><input class="Button" type="button" value="AC" onclick="clean()"></td>
+            <td id="secondcolor"><input class="Button" type="button" value="1" onclick="insert('1')"></td>
+            <td id="secondcolor"><input class="Button" type="button" value="2" onclick="insert('2')"></td>
+            <td id="secondcolor"><input class="Button" type="button" value="3" onclick="insert('3')"></td>
+            
+            <td id="Primary"><input class="Button" type="button" value="+" onclick="insert('+')"></td>
+        </tr>
+        <tr>
+            <td id="secondcolor"><input class="Button" type="button" value="0" onclick="insert('0')"></td>
+            <td id="secondcolor"><input class="Button" type="button" value="00" onclick="insert('00')"></td>
+            <td id="secondcolor"><input class="Button" type="button" value="•" onclick="insert('.')"></td>
+            <td id="Primary"><input class="Button" type="button" value="=" onclick="insert('equal')"></td>
+        </tr>
+        <tr>
+        </tr>
+</body>
+</html>
