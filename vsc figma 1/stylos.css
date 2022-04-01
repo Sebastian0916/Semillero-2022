@@ -52,7 +52,7 @@ header {
   text-align: left;
   color: var(--darkB);
 }
-p {
+h1{
   width: 350px;
   text-align: left;
   margin-top: 10px;
@@ -144,7 +144,7 @@ h2 {
     background-color: white;
     box-shadow: 3px 4px 9px grey;
   }
-  header {
+  h1 {
     font-size: 14px;
     width: 260px;
     line-height: unset;
