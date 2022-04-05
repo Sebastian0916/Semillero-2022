@@ -44,29 +44,74 @@ section{
     align-items: center;
 }
 .icons{
-    
+    display: flex;
+    justify-content:s;
     margin-top:20px;
     margin-right: 110px;
-    
+    align-items: center;
 }
-
+.boxIII{
+    display: flex;
+    justify-content:right;
+    align-items:flex-end;
+    position:relative;
+    bottom:30px;
+}
 .boxII{
     z-index: 1;
     background-color: #1c2b66;
     width: 359.89px;
     height: 150px;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 12.88px;
     color: hsl(243, 100%, 93%);
+}
+.bar{
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    width: 288px;
+    height: 12px;
+    background-color: #151e49;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.progressbar{
+    z-index: 3;
+    width: 200px !important;
+    height: 12px;
+    background: linear-gradient(267.9deg, #FA4D91 21.63%, #FE9E97 77.12%);
+    border-radius: 20px;
+    position: relative;
+    animation: smooth 5s;
     
 }
-.autoincrement{
-    width: 300px;
-    height: 20px
+@keyframes smooth{
+    from {width: 0%;} 
+    to {width: 80%;}
 }
+.progressbar::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    position:relative;
+    border-radius: 5px;
+    right: 3px;
+    top: 2px;
+}
+.pin{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+    float: right;
+    margin: 1px;
+}
+
 h1{
     display: flex;
     justify-content: space-between;
@@ -74,35 +119,41 @@ h1{
 }
 .document:hover{
     animation-name: document;
-    animation-duration:1s ;
     animation-fill-mode: forwards;
 }
 @keyframes document{
     100%{
         background-color: #0C122C;
         padding: 5px;
+        border-radius: 5px;
+        width: 15px;
+        height: 15px;
     }
 }
 .folder:hover{
     animation-name: folder;
-    animation-duration:1s ;
     animation-fill-mode: forwards;
 }
 @keyframes folder{
     100%{
         background-color: #0C122C;
         padding: 5px;
+        border-radius: 5px;
+        width: 15px;
+        height: 15px;
     }
 }
 .upload:hover{
     animation-name: upload;
-    animation-duration:1s ;
     animation-fill-mode: forwards;
 }
 @keyframes upload{
     100%{
         background-color: #0C122C;
         padding: 5px;
+        border-radius: 5px;
+        width: 15px;
+        height: 15px;
     }
 }
 
