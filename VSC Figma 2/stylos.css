@@ -1,0 +1,111 @@
+*{
+    margin:0%;
+    font-family: "Raleway", sans-serif;
+}
+body{
+    background-color: rgb(12, 18, 44);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.img{
+    z-index: 0; 
+    position: absolute;
+    bottom: 0 ;
+    right: 0; 
+    
+}
+section{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px;
+}
+.boxI{
+    z-index: 1;
+    background-color: #1c2b66;
+    border-radius: 12.88px 64.38px 12.88px 12.88px; 
+    width: 269.11px;
+    height: 171.25px;
+    display: flex;
+    justify-items: center;
+    align-items:center;
+    flex-direction:column;
+    margin: 100px;
+}
+.logo{
+    height: 36.03px;
+    width: 108.16px;
+    margin-top:40px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons{
+    
+    margin-top:20px;
+    margin-right: 110px;
+    
+}
+
+.boxII{
+    z-index: 1;
+    background-color: #1c2b66;
+    width: 359.89px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12.88px;
+    color: hsl(243, 100%, 93%);
+    
+}
+.autoincrement{
+    width: 300px;
+    height: 20px
+}
+h1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.document:hover{
+    animation-name: document;
+    animation-duration:1s ;
+    animation-fill-mode: forwards;
+}
+@keyframes document{
+    100%{
+        background-color: #0C122C;
+        padding: 5px;
+    }
+}
+.folder:hover{
+    animation-name: folder;
+    animation-duration:1s ;
+    animation-fill-mode: forwards;
+}
+@keyframes folder{
+    100%{
+        background-color: #0C122C;
+        padding: 5px;
+    }
+}
+.upload:hover{
+    animation-name: upload;
+    animation-duration:1s ;
+    animation-fill-mode: forwards;
+}
+@keyframes upload{
+    100%{
+        background-color: #0C122C;
+        padding: 5px;
+    }
+}
+
+
+
+
