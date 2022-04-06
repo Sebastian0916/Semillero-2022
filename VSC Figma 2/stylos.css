@@ -1,3 +1,4 @@
+
 *{
     margin:0%;
     font-family: "Raleway", sans-serif;
@@ -7,7 +8,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 80vh;
 }
 .img{
     z-index: 0; 
@@ -18,7 +19,6 @@ body{
 }
 section{   
     display: flex;
-    justify-content: center;
     align-items: center;
     border: 10px;
 }
@@ -60,7 +60,7 @@ section{
 .boxII{
     z-index: 1;
     background-color: #1c2b66;
-    width: 359.89px;
+    width: 48%;
     height: 150px;
     display: flex;
     align-items: center;
@@ -76,12 +76,11 @@ section{
     height: 12px;
     background-color: #151e49;
     border-radius: 20px;
-    margin-bottom: 10px;
 }
 
 .progressbar{
     z-index: 3;
-    width: 200px !important;
+    width: 270px;
     height: 12px;
     background: linear-gradient(267.9deg, #FA4D91 21.63%, #FE9E97 77.12%);
     border-radius: 20px;
@@ -91,11 +90,11 @@ section{
 }
 @keyframes smooth{
     from {width: 0%;} 
-    to {width: 80%;}
+    to {width: 93.5%;}
 }
 .progressbar::after{
     content: '';
-    width: 10px;
+    width: 10%;
     height: 10px;
     background-color: white;
     position:relative;
@@ -156,7 +155,11 @@ h1{
         height: 15px;
     }
 }
-
+@media only screen and (max-width: 600px){
+    body{
+        flex-direction: column;
+    } 
+}
 
 
 
