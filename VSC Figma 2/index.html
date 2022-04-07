@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FIGMA 2</title>
     <link rel="stylesheet" href="stylos.css" />
+    
   </head>
   <body>
     <img src="bg-desktop.png" alt="" class="img" />
@@ -13,30 +14,15 @@
       <aside class="boxI">
         <img src="logo.svg" alt="Logo" class="logo" />
         <div class="icons">
-          <img
-            src="icon-document.svg"
-            style="margin: 5px; width: 22.15px; height: 22.69px"
-            alt="Documento"
-            class="document"
-          />
-          <img
-            src="icon-folder.svg"
-            style="margin: 5px; width: 22.15px; height: 22.69px"
-            alt="Folder"
-            class="folder"
-          />
-          <img
-            src="icon-upload.svg"
-            style="margin: 5px; width: 22.15px; height: 22.69px"
-            alt="upload"
-            class="upload"
-          />
+          <img src="icon-document.svg" alt="Documento" class="document" />
+          <img src="icon-folder.svg" alt="Folder" class="folder" />
+          <img src="icon-upload.svg" alt="upload" class="upload" />
         </div>
       </aside>
 
       <aside class="boxII">
         <img src="Group 7.svg" alt="Group 7" class="boxIII" />
-        <p>You've used <b>815 GB</b> of you storage</p>
+        <p id="message">You've used <b>815 GB</b> of you storage</p>
         <div>
           <!-- <meter class="autoincrement" min="0" max="100" value="60">Gb Utilizados</meter>    -->
           <div class="bar">
@@ -44,7 +30,7 @@
               <div class="pin"></div>
             </span>
           </div>
-          <h1>
+          <h1 id="memory-left">
             0GB
             <p>100GB</p>
           </h1>
@@ -52,4 +38,30 @@
       </aside>
     </section>
   </body>
+  <script>
+    // const memoryLeft = document.getElementById("memory-left");
+    // const message = document.getElementById("message");
+
+    // const num = 0;
+
+    // let time = setInterval(() => {
+    //   num += 1;
+
+    //   if (num == 80) {
+    //     clearInterval(time);
+    //   }
+    //   message.textContent == `You've used  ${num * 10} GB of your storage`;
+    // }, (memoryLeft.innerText = num));
+    const imagen = document.querySelector(".img");
+    console.log(imagen)
+    console.log(window.screen.availWidth);
+    if (window.screen.availWidth < "600px") {
+      console.log('< menor ue 600')
+      imagen.style.display = "none";
+    } else {
+      imagen.style.display = "flex";
+      console.log('<myora menor ue 600')
+
+    }
+  </script>
 </html>
