@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  height: 0;
+}
+body {
+  font-family: "inter" sans-serif;
+}
+
+.fondI {
+  display: flex;
+  position: relative;
+  top: 60px;
+  left: 600px;
+  height: 520px;
+  width: 560px;
+}
+.fondII {
+  z-index: 0;
+  display: flex;
+  position: relative;
+  bottom: 50px;
+  left: 0.1px;
+  width: 640px;
+  height: 170px;
+}
+.fondIII {
+  display: flex;
+  position: relative;
+  bottom: 585px;
+  left: 120px;
+  width: 152px;
+  height: 102px;
+}
+img {
+  display: flex;
+  position: relative;
+  bottom: 684px;
+  left: 650px;
+  height: 430px;
+  width: 435px;
+}
+.rectangle {
+  display: flex;
+  position: relative;
+  width: 127px;
+  height: 55px;
+  bottom: 710px;
+  left: 690px;
+}
+.bottons {
+  height: 30px;
+  display: flex;
+  position: relative;
+  left: 730px;
+  bottom: 752px;
+  border-radius: 25px;
+}
+.bottom-left {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  right: 14px;
+  background-color: transparent;
+}
+.bottom-right {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  left: 7px;
+  background-color: transparent;
+}
+.text {
+  z-index: 1;
+  display: flex;
+  position: relative;
+  text-align: left;
+  top: 172px;
+  left: 80px;
+  font-size: 240%;
+  color: #202046;
+}
+.name {
+  z-index: 1;
+  display: flex;
+  position: relative;
+  top: 410px;
+  left: 88px;
+  font-size: 25px;
+  color: #202046;
+}
+.profession {
+  display: flex;
+  position: relative;
+  top: 410px;
+  font-size: 26px;
+  left: 250px;
+  color: #d6d6d6;
+}

@@ -185,6 +185,9 @@ h1 {
     width: 130px;
     margin-left: 90px;
   }
+  .boxI{
+    width: 340px;
+  }
   .icons {
     margin-left: 100px;
     margin-bottom: 30px;
@@ -246,7 +249,7 @@ h1 {
   }
   .boxIII{
     top: 120px;
-    border-radius: 0 0 49px 0;
+    border-radius: 0 0 30px 0;
 }
 .bar{
   margin: 5px;
