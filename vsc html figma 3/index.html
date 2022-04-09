@@ -6,26 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="stylos.css" />
+    <script>
+      let i = 1;
+      function siguiente() {
+        // alert("img"+ i.toString())
+        document.getElementsByClassName("img" + i.toString())[0].style.display =
+          "none";
+        document.getElementsByClassName("div" + i.toString())[0].style.display =
+          "none";
+        i++;
+        if (i == 4) {
+          i = 1;
+        }
+        document.getElementsByClassName("img" + i.toString())[0].style.display =
+          "";
+        document.getElementsByClassName("div" + i.toString())[0].style.display =
+          "";
+      }
+      function anterior() {
+        // alert("img"+ i.toString())
+        document.getElementsByClassName("img" + i.toString())[0].style.display =
+          "none";
+        document.getElementsByClassName("div" + i.toString())[0].style.display =
+          "none";
+        i--;
+        if (i == 0) {
+          i = 3;
+        }
+        document.getElementsByClassName("img" + i.toString())[0].style.display =
+          "";
+        document.getElementsByClassName("div" + i.toString())[0].style.display =
+          "";
+      }
+    </script>
   </head>
   <body>
     <main id="container">
-      <p class="text">
-        I’ve been interested in coding for a while <br> never taken the jump. Until
-        now. I <br> couldn’t recommend this course enough. <br> i’m now in the job of my
-        dreams and so <br> excited about the future
-      </p>
-      <span class="name">Tanya Sinclair</span>
-      <span class="profession">UX engineer</span>
+      <div class="div1">
+        <p class="text">
+          I’ve been interested in coding for a while <br />
+          never taken the jump. Until now. I <br />
+          couldn’t recommend this course enough. <br />
+          i’m now in the job of my dreams and so <br />
+          excited about the future
+        </p>
+        <span class="name">Tanya Sinclair</span>
+        <span class="profession">UX engineer</span>
+      </div>
+      <div class="div2" style="display: none">
+        <p class="text2">
+          “If you want to lay to best foundation <br />
+          possible i’d recommend taking this <br />
+          course. The depth the intructors go into <br />
+          is incredible. I now feel so confident about <br />
+          starting up as a professional developer.”
+        </p>
+        <span class="name2">John Tarkpor</span>
+        <span class="profession2">Junior Front-end developer</span>
+      </div>
+      <div class="div3" style="display: none">
+        <p class="text3">
+          “If you want to lay a foundation for <br> english learnig combined with <br>
+          software course. Look no futher, <br> English4 Coders is here. I’m getting <br>
+          better at coding and improving my <br> English at the same time ”
+        </p>
+        <span class="name3">James Chaves </span>
+        <span class="profession3">Auxiliary Software Dev</span>
+      </div>
       <aside>
         <img src="pattern-bg.svg" alt="patter" class="fondI" />
         <img src="pattern-curve.svg" alt="patter curva" class="fondII" />
         <img src="pattern-quotes.svg" alt="patter quotes" class="fondIII" />
-        <img src="image-tanya.jpg" alt="imagen" class="img" />
+        <img src="image-tanya.jpg" alt="imagen" class="img img1" />
+        <img
+          src="image-john.jpg"
+          alt="imagen"
+          class="img img2"
+          style="display: none"
+        />
+        <img
+          src="image-james.jpg"
+          alt="imagen"
+          class="img img3"
+          style="display: none"
+        />
+
         <img src="Rectangle 3.png" alt="Rectangle" class="rectangle" />
         <article></article>
         <section class="bottons">
-          <input type="button" class="bottom-left" value="<" />
-          <input type="button" class="bottom-right" value=">" />
+          <button type="button" class="bottom-left" onclick="anterior()">
+            <
+          </button>
+          <button type="button" class="bottom-right" onclick="siguiente()">
+            >
+          </button>
         </section>
       </aside>
     </main>
