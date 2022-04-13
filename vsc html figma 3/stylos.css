@@ -64,6 +64,8 @@ img {
   height: 30px;
   font-size: 22px;
   right: 14px;
+  border: 0px;
+  background-color: white;
 }
 .bottom-right {
   display: flex;
@@ -73,6 +75,8 @@ img {
   height: 30px;
   font-size: 22px;
   left: 7px;
+  border: 0px;
+  background-color: white;
 }
 .text {
   z-index: 1;
