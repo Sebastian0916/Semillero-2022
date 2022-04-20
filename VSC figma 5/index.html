@@ -9,22 +9,7 @@
       rel="stylesheet"
     />
     <title>Document</title>
-    <link rel="stylesheet" href="stylos.css" />
-    <script>
-      function validarCorreo(campo) {
-        let lbl = document.getElementById('labelError') 
-        let error = document.getElementById('imgError')
-        if (campo.value.indexOf("@") > 0) {
-          // console.log("correo valido");
-          lbl.style.display="none"
-          error.style.display="none"          
-        } else {
-          // console.log("correo invalido");
-          lbl.style.display=""
-          error.style.display=""
-        }
-      }
-    </script>
+    <link rel="stylesheet" href="src/stylos.css" />
   </head>
   <body>
     <div id="container">
@@ -39,14 +24,14 @@
         <p class="texto">
           Hello fellow shoppersl We’re currently building our new <br />
           <br />
-          fashion store Add your email below to stay up-to-date with <br /
+          fashion store Add your email below to stay up-to-date with <br/>
           <br />
           announcenents and our launch deals <br />
         </p>
         <form action="" method="get" id="form">
           <div>
-          <input placeholder="Email Address" id="formulario" onkeyup="validarCorreo(this)"/>
-          <span id="emailOk"></span>
+          <input placeholder="Email Address" id="formulario"/>
+          <span class="label" ></span>
           <button type="submit" class="botton">></button>                    
           <label class="labelError" style="display: none;" id="labelError">por favor digite correo valido</label>
           
@@ -59,5 +44,6 @@
         <img src="hero-desktop.jpg" alt="foto" class="foto" />
       </aside>
     </div>
+    <script src="src/script.js"></script>
   </body>
 </html>

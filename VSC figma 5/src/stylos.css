@@ -100,7 +100,7 @@ span {
   color: white;
   background: linear-gradient(200.9deg, #f3bfbc 100%, #ee979b 100%);
 }
-.labelError {
+.labe{
   display: flex;
   position: relative;
   top: 115px;
@@ -108,6 +108,7 @@ span {
   width: 250px;
   height: 50px;
   color: #ee979b;
+  font-size: 10px;
 }
 .error {
   display: flex;
