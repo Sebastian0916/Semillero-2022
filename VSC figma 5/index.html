@@ -11,13 +11,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="stylos.css" />
     <script>
-      const form = document.getElementById("form");
-
       function validarCorreo(campo) {
+        let lbl = document.getElementById('labelError') 
+        let error = document.getElementById('imgError')
         if (campo.value.indexOf("@") > 0) {
-          alert("correo valido");
+          // console.log("correo valido");
+          lbl.style.display="none"
+          error.style.display="none"          
         } else {
-          alert("correo invalido");
+          // console.log("correo invalido");
+          lbl.style.display=""
+          error.style.display=""
         }
       }
     </script>
@@ -35,24 +39,24 @@
         <p class="texto">
           Hello fellow shoppersl We’re currently building our new <br />
           <br />
-          fashion store Add your email below to stay up-to-date with <br />
+          fashion store Add your email below to stay up-to-date with <br /
           <br />
           announcenents and our launch deals <br />
         </p>
         <form action="" method="get" id="form">
-          <input
-            type="text"
-            placeholder="Email Address"
-            id="formulario"
-            class="validacion"
-            onblur="validarCorreo(this)"
-          />
-          <button type="submit" class="botton">></button>
+          <div>
+          <input placeholder="Email Address" id="formulario" onkeyup="validarCorreo(this)"/>
+          <span id="emailOk"></span>
+          <button type="submit" class="botton">></button>                    
+          <label class="labelError" style="display: none;" id="labelError">por favor digite correo valido</label>
+          
         </form>
+        <img src="icon-error.svg" style="display:none;" alt="error"  class="error" id="imgError">
+
+      </div>
       </aside>
       <aside>
         <img src="hero-desktop.jpg" alt="foto" class="foto" />
-        <img src="hero-mobile.jpg" alt="mobil" class="foto1">
       </aside>
     </div>
   </body>
