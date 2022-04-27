@@ -1,0 +1,490 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(192, 100%, 9%);
+}
+#Container {
+  display: flex;
+  position: relative;
+  right: 10px;
+}
+#container1 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  background-image: url(bg-hero-desktop.svg);
+  width: 1000px;
+  height: 500px;
+  top: 860px;
+  left: 50px;
+}
+.left {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.logo {
+  height: 50px;
+  width: 120px;
+  padding: 15px 0 0 15px;
+}
+.titulo1 {
+  font-size: 40px;
+  width: 400px;
+  font-weight: bolder;
+  padding: 10px 0 0 15px;
+}
+.texto1 {
+  font-size: 15px;
+  width: 350px;
+  font-weight: 500;
+  padding: 15px 0 0 15px;
+  line-height: 25px;
+}
+.boton {
+  width: 230px;
+  height: 40px;
+  position: relative;
+  left: 40px;
+  top: 20px;
+  background-color: #ff52bf;
+  color: white;
+  border: none;
+  border-radius: 30px;
+}
+.img1 {
+  width: 450px;
+  height: 400px;
+  top: 70px;
+  position: relative;
+  left: 120px;
+}
+.boton2 {
+  height: 30px;
+  width: 100px;
+  position: relative;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: 0;
+  font-size: 15px;
+}
+#container2 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 900px;
+  box-shadow: 0 0 10px gray;
+  height: 400px;
+  top: 860px;
+  left: 100px;
+  border-radius: 15px;
+}
+.left2 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.titulo2 {
+  position: relative;
+  top: 80px;
+  font-size: 40px;
+  font-weight: bolder;
+  left: 40px;
+}
+.texto2 {
+  font-size: 15px;
+  width: 370px;
+  font-weight: 500;
+  position: relative;
+  top: 100px;
+  left: 40px;
+  line-height: 25px;
+}
+.img2 {
+  position: relative;
+  top: 50px;
+  left: 120px;
+  height: 300px;
+}
+#container3 {
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  width: 900px;
+  box-shadow: 0 0 10px gray;
+  height: 400px;
+  top: 900px;
+  left: 100px;
+  border-radius: 15px;
+}
+.left3 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.titulo3 {
+  position: relative;
+  top: 80px;
+  font-size: 40px;
+  font-weight: bolder;
+  right: 25px;
+}
+.texto3 {
+  font-size: 15px;
+  width: 370px;
+  font-weight: 500;
+  position: relative;
+  top: 100px;
+  right: 30px;
+  line-height: 25px;
+}
+.img3 {
+  position: relative;
+  top: 50px;
+  right: 60px;
+  height: 300px;
+}
+#container4 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 900px;
+  box-shadow: 0 0 10px gray;
+  height: 400px;
+  top: 940px;
+  left: 100px;
+  border-radius: 15px;
+}
+.left4 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.titulo4 {
+  position: relative;
+  top: 80px;
+  font-size: 40px;
+  font-weight: bolder;
+  left: 25px;
+}
+.texto4 {
+  font-size: 15px;
+  width: 370px;
+  font-weight: 500;
+  position: relative;
+  top: 100px;
+  left: 30px;
+  line-height: 25px;
+}
+.img4 {
+  position: relative;
+  top: 50px;
+  left: 90px;
+  height: 300px;
+}
+#container5 {
+  z-index: 1;
+  background-color: white;
+  border: 10px;
+  border-radius: 8px;
+  position: relative;
+  top: 980px;
+  width: 450px;
+  height: 200px;
+  left: 330px;
+}
+.titulo5 {
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 40px;
+}
+.boton3 {
+  position: relative;
+  left: 110px;
+  height: 40px;
+  width: 200px;
+  border: none;
+  background-color: #ff52bf;
+  border-radius: 20px;
+  color: white;
+  font-weight: bolder;
+}
+#container6 {
+  z-index: 0;
+  position: relative;
+  top: 900px;
+  left: 100px;
+  background-color: #00252e;
+  height: 400px;
+  width: 900px;
+  border-radius: 15px;
+}
+.logo2 {
+  position: relative;
+  top: 120px;
+  left: 80px;
+  width: 110.06px;
+  height: 20.55px;
+}
+.location {
+  display: flex;
+  position: relative;
+  left: 100px;
+  color: white;
+  flex-direction: row;
+  top: 140px;
+}
+.ubicacion {
+  height: 20px;
+  width: 20px;
+}
+.texto6 {
+  width: 250px;
+  font-size: 12px;
+}
+.tell {
+  display: flex;
+  position: relative;
+  left: 100px;
+  color: white;
+  top: 160px;
+}
+.email {
+  display: flex;
+  position: relative;
+  left: 100px;
+  color: white;
+  top: 180px;
+}
+.valores {
+  position: relative;
+  left: 400px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  top: 30px;
+}
+.valores2 {
+  position: relative;
+  left: 530px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  bottom: 90px;
+}
+.iconos {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 250px;
+  right: 50px;
+  height: 50px;
+}
+.boton:hover {
+  background-color: rgb(190, 73, 122);
+}
+.boton2:hover {
+  background-color: #00252e;
+  color: white;
+}
+.boton3:hover {
+  background-color: rgb(190, 73, 122);
+}
+@media screen and (max-width: 600px) {
+  #container1 {
+    width: 700px;
+    height: 700px;
+    background-image: none;
+    background-image: url(bg-hero-mobile.svg);
+    background-size: 100%;
+    flex-direction: column;
+    background-color: #EDFBFE;
+    top: 40%;
+  }
+  .left {
+    top: 30px;
+    left: 200px;
+  }
+  .logo {
+    height: 40px;
+    width: 80px;
+  }
+  .titulo1 {
+    position: relative;
+    top: 20px;
+    left: 50px;
+    text-align: center;
+    font-size: 30px;
+    width: 300px;
+  }
+  .texto1{
+    position: relative;
+    top: 30px;
+    left: 40px;
+    text-align: center;
+    width: 300px;
+    font-size: 17px;
+  }
+  .boton{
+    left: 80px;
+    top: 60px;
+  }
+  .img1 {
+    position: relative;
+    left: 270px;
+    top: 100px;
+    width: 280px;
+    height: 230px;
+  }
+  .boton2 {
+    top: -500px;
+    left: 510px;
+   }
+ #container2{
+    top: 41%;
+    left: 225px;
+    width: 450px;
+    height: 500px;
+    flex-direction: column-reverse;
+  }
+  .left2{
+    bottom: 190px;
+  }
+  .titulo2{
+    position: relative;
+    top: 120px;
+    left: 80px;
+  }
+  .texto2{
+    text-align: center;
+    top: 130px;
+  }
+  .img2{
+    top: -100px;
+    left: 90px;
+    width: 270px;
+    height: auto;
+    
+  }
+  #container3{
+    top: 42%;
+    left: 225px;
+    width: 450px;
+    height: 500px;
+    flex-direction: column;
+  }
+  .left3{
+    bottom: 80px;
+  }
+  .titulo3{
+    position: relative;
+    top: 100px;
+    left: 50px;
+  }
+  .texto3{
+    text-align: center;
+    top: 110px;
+    left: 70px;
+    font-size: 15px;
+    width: 300px;
+  }
+  .img3{
+    top: 100px;
+    left: 80px;
+    width: 300px;
+    height: auto;
+  }
+  #container4{
+    top: 43%;
+    left: 225px;
+    width: 450px;
+    height: 500px;
+    flex-direction: column-reverse;
+  }
+  .left4{
+    bottom: 190px;
+  }
+  .titulo4{
+    position: relative;
+    top: 120px;
+    left: 130px;
+  }
+  .texto4{
+    text-align: center;
+    left: 75px;
+    width: 300px;
+    top: 130px;
+  }
+  .img4{
+    top: -100px;
+    left: 80px;
+    width: 300px;
+    height: auto;
+  }
+  #container5{
+    top: 45%;
+    left: 240px;
+    width: 420px;
+    height: 150px;
+  }
+  .titulo5{
+    position: relative;
+    font-size:17px ;
+    left: 55px;
+  }
+  .boton3{
+    left: 110px;
+    bottom: 15px;
+  }
+  #container6{
+    top: 1330px;
+    width: 450px;
+    left: 225px;
+    height: 700px;
+  }
+  .logo2{
+    top: 80px;
+    left: 25px;
+    width: 100px;
+    height: auto;
+  }
+  .location{
+    top: 100px;
+    left: 25px;
+  }
+  .tell{
+    top: 120px;
+    left: 25px;
+  }
+  .email{
+    top: 150px;
+    left: 25px;
+  }
+  .valores{
+    left: 25px;
+    top: 160px;
+  }
+  .valores2{
+    left: 25px;
+    top: 160px;
+  }
+  .iconos{
+    right: 150px;
+    top: 200px;
+  }
+}

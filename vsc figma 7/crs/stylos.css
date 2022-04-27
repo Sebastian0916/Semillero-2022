@@ -12,7 +12,7 @@ body::before {
   background-image: url(345ffe9a30545d615009ce82ac40ab6d.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  animation: movement 3s linear infinite;
+  animation: movement 10s linear infinite;
   transition: 2s;
 }
 @keyframes movement {
