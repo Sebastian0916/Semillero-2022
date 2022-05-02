@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
-
 body {
   width: 100vw;
   height: 90vh;
@@ -313,7 +312,7 @@ body {
     background-image: url(bg-hero-mobile.svg);
     background-size: 100%;
     flex-direction: column;
-    background-color: #EDFBFE;
+    background-color: #edfbfe;
     top: 40%;
   }
   .left {
@@ -332,7 +331,7 @@ body {
     font-size: 30px;
     width: 300px;
   }
-  .texto1{
+  .texto1 {
     position: relative;
     top: 30px;
     left: 40px;
@@ -340,7 +339,7 @@ body {
     width: 300px;
     font-size: 17px;
   }
-  .boton{
+  .boton {
     left: 80px;
     top: 60px;
   }
@@ -354,136 +353,135 @@ body {
   .boton2 {
     top: -500px;
     left: 510px;
-   }
- #container2{
+  }
+  #container2 {
     top: 41%;
     left: 225px;
     width: 450px;
     height: 500px;
     flex-direction: column-reverse;
   }
-  .left2{
+  .left2 {
     bottom: 190px;
   }
-  .titulo2{
+  .titulo2 {
     position: relative;
     top: 120px;
     left: 80px;
   }
-  .texto2{
+  .texto2 {
     text-align: center;
     top: 130px;
   }
-  .img2{
+  .img2 {
     top: -100px;
     left: 90px;
     width: 270px;
     height: auto;
-    
   }
-  #container3{
+  #container3 {
     top: 42%;
     left: 225px;
     width: 450px;
     height: 500px;
     flex-direction: column;
   }
-  .left3{
+  .left3 {
     bottom: 80px;
   }
-  .titulo3{
+  .titulo3 {
     position: relative;
     top: 100px;
     left: 50px;
   }
-  .texto3{
+  .texto3 {
     text-align: center;
     top: 110px;
     left: 70px;
     font-size: 15px;
     width: 300px;
   }
-  .img3{
+  .img3 {
     top: 100px;
     left: 80px;
     width: 300px;
     height: auto;
   }
-  #container4{
+  #container4 {
     top: 43%;
     left: 225px;
     width: 450px;
     height: 500px;
     flex-direction: column-reverse;
   }
-  .left4{
+  .left4 {
     bottom: 190px;
   }
-  .titulo4{
+  .titulo4 {
     position: relative;
     top: 120px;
     left: 130px;
   }
-  .texto4{
+  .texto4 {
     text-align: center;
     left: 75px;
     width: 300px;
     top: 130px;
   }
-  .img4{
+  .img4 {
     top: -100px;
     left: 80px;
     width: 300px;
     height: auto;
   }
-  #container5{
+  #container5 {
     top: 45%;
     left: 240px;
     width: 420px;
     height: 150px;
   }
-  .titulo5{
+  .titulo5 {
     position: relative;
-    font-size:17px ;
+    font-size: 17px;
     left: 55px;
   }
-  .boton3{
+  .boton3 {
     left: 110px;
     bottom: 15px;
   }
-  #container6{
+  #container6 {
     top: 1330px;
     width: 450px;
     left: 225px;
     height: 700px;
   }
-  .logo2{
+  .logo2 {
     top: 80px;
     left: 25px;
     width: 100px;
     height: auto;
   }
-  .location{
+  .location {
     top: 100px;
     left: 25px;
   }
-  .tell{
+  .tell {
     top: 120px;
     left: 25px;
   }
-  .email{
+  .email {
     top: 150px;
     left: 25px;
   }
-  .valores{
+  .valores {
     left: 25px;
     top: 160px;
   }
-  .valores2{
+  .valores2 {
     left: 25px;
     top: 160px;
   }
-  .iconos{
+  .iconos {
     right: 150px;
     top: 200px;
   }
