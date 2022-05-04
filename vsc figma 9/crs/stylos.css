@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+#content {
+  height: 200px;
+  width: 1200px;
+  background-color: #f8f9fe;
+}
+.titulo {
+  color: #14141c;
+  font-size: 22px;
+  position: relative;
+  top: 40px;
+  left: 45px;
+}
+.subtitulo {
+  color: #7c7e8b;
+  font-size: 15px;
+  padding: 40px 0 0 45px;
+}
+.n1 {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bolder;
+  padding-right: 55px;
+}
+.btn {
+  width: 60px;
+  height: 25px;
+  border: none;
+  background: linear-gradient(90deg, #4597d1, #4cc58f);
+  border-radius: 20px;
+}
+.sun,
+.moon {
+  width: 20px;
+  height: 20px;
+}
+.container {
+  position: relative;
+  width: 1120px;
+  left: 50px;
+  bottom: 80px;
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+}
+.cuadro, .cuadro1 {
+  width: 245px;
+  background-color: #f0f3fa;
+  height: 180px;
+  background-image: url(Rectangle\ 7.png);
+  background-repeat: no-repeat;
+}
+.up, .up1, .up2, .up3{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.text, .text1, .text2, .text3{
+  color: #7c7e8b;
+  padding-left: 5px;
+}
+.numero, .numero1, .numero2, .numero3 {
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  padding-top: 20px;
+}
+.seguidores, .seguidores1, .seguidores2, .seguidores3 {
+  color: #7c7e8b;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+.aumento, .aumento1,.aumento2,.aumento3 {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  height: 100px;
+}
+.iup, .iup1,.iup2,.iup3 {
+  width: 10px;
+  height: 10px;
+}
+.color,.color1,.color2,.color3 {
+  color: #1eb589;
+}
+.twitter {
+  position: relative;
+  bottom: 14px;
+}
+.cuadro2 {
+  position: relative;
+  width: 245px;
+  background-color: #f0f3fa;
+  height: 180px;
+  background-image: url(Rectangle\ 9.png);
+  background-repeat: no-repeat;
+}
+.cuadro3 {
+  position: relative;
+  width: 245px;
+  background-color: #f0f3fa;
+  height: 180px;
+  background-image: url(Rectangle\ 10.png);
+  background-repeat: no-repeat;
+}
+.subtitulo2 {
+  color: #7c7e8b;
+  padding-top: 30px;
+}
+.pagef, .likes,.likes2,.profile,.retweets,.likes3,.likes4,.totalv {
+  background-color: #f0f3fa;
+  width: 250px;
+  height: 120px;
+}
+.page,.like,.like2,.profil,.twitter,.like3,.like4,.total {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.titulop,.titulol,.titulo2,.titulo3,.titulo4,.titulo5,.titulo6,.titulo7 {
+  color: #7c7e8b;
+  font-size: 20px;
+}
+.face,.face1,.face2,.face3,.face4,.face5,.face6,.face7 {
+  width: 15px;
+  height: 15px;
+}
+.numer,.numer1,.numer2,.numer3,.numer4,.numer5,.numer6,.numer7 {
+  font-size: 40px;
+}
+.porcentaje,.porcentaje2,.porcentaje3,.porcentaje4,.porcentaje5 {
+  top: 15px;
+  left: 20px;
+  position: relative;
+  display: flex;
+  color: #1eb589;
+  font-size: 15px;
+}
+.icon,.icon2,.icon3,.icon4,.icon5,.icon6,.icon7 {
+  position: relative;
+  left: 17px;
+}
+.porcentaje1,.porcentaje6,.porcentaje7 {
+  top: 15px;
+  left: 20px;
+  position: relative;
+  display: flex;
+  color: #dc414c;
+  font-size: 15px;
+}
+.container2 {
+  position: relative;
+  width: 750px;
+  left: 50px;
+  bottom: 80px;
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2em;
+}
+main.darkmode {
+  background-color: #1d2029;
+  color: white;
+}
+#content.darkmode, article.darkmode {
+  background-color: #252b43;
+  color: #ffff;
+}
+h1.darkmode {
+  color: #ffff;
+}
+@media only screen and (max-width: 600px) {
+  #contenedor {
+    width: 400px;
+    height: 2350px;
+    position: relative;
+    top: 750px;
+  }
+  #content {
+    width: 400px;
+    height: 150px;
+  }
+  .titulo {
+    left: 20px;
+  }
+  .subtitulo {
+    left: 6px;
+  }
+  .dmode {
+    left: -50px;
+    top: 183px;
+  }
+  .btn {
+    left: -40px;
+    top: 180px;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2em;
+    top: 100px;
+    left: 75px;
+  }
+  .container2 {
+    grid-template-columns: 1fr;
+    gap: 2em;
+    left: 75px;
+    top: 100px;
+  }
+}
