@@ -41,10 +41,23 @@ body {
   background: linear-gradient(90deg, #4597d1, #4cc58f);
   border-radius: 20px;
 }
-.sun,
-.moon {
+.circulo{
+  border-radius: 1000px;
+  background-color: white ;
+  width: 25px;
+  height:20px;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  z-index: 1;
+}
+.sun,.moon {
+  z-index: 0;
   width: 20px;
   height: 20px;
+  position: relative;
+  bottom: 16px;
+
 }
 .container {
   position: relative;
@@ -162,6 +175,7 @@ body {
   color: #dc414c;
   font-size: 15px;
 }
+
 .container2 {
   position: relative;
   width: 750px;
@@ -200,13 +214,9 @@ h1.darkmode {
   .subtitulo {
     left: 6px;
   }
-  .dmode {
-    left: -50px;
-    top: 183px;
-  }
-  .btn {
-    left: -40px;
-    top: 180px;
+  .n1{
+    position: relative;
+    top: 90px;
   }
   .container {
     grid-template-columns: 1fr;
