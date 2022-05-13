@@ -24,7 +24,7 @@ header {
   display: flex;
   border-radius: 20px;
   width: 50%;
-  height:16.5%;
+  height: 16.5%;
   justify-content: space-between;
   position: relative;
   top: 60px;
@@ -48,10 +48,32 @@ header {
 .titulop {
   display: flex;
   justify-content: center;
-  font-size: 30px;
+  font-size: 26px;
   color: #7986c2;
 }
 .puntuacion {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #5c5a6b;
+}
+.puntoscomp {
+  background-color: white;
+  height: 115px;
+  width: 150px;
+  color: black;
+  position: relative;
+  top: 12.5px;
+  border-radius: 20px;
+}
+.titulocomp {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  color: #7986c2;
+}
+.puntuacioncomp {
   display: flex;
   justify-content: center;
   font-size: 50px;
@@ -62,8 +84,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 50%;
+  width: 35%;
+  height: 43%;
   justify-content: space-around;
 }
 .fondo-azul {
@@ -110,13 +132,34 @@ section {
   border-radius: 1000px;
   border: none;
 }
+.line1 {
+  background-color: #1b2a49;
+  width: 350px;
+  position: relative;
+  top: 240px;
+}
+.line2 {
+  background-color: #1b2a49;
+  width: 250px;
+  position: relative;
+  top: 370px;
+  right: 60px;
+  transform: rotate(55deg);
+}
+.line3 {
+  background-color: #1b2a49;
+  width: 250px;
+  position: relative;
+  top: 350px;
+  left: 150px;
+  transform: rotate(125deg);
+}
 .fondo-amarillo {
   z-index: 0;
   background-color: #eba216;
   height: 150px;
   width: 150px;
   border-radius: 100px;
-  
 }
 .btn-tijera {
   z-index: 0;
@@ -149,27 +192,27 @@ footer {
 }
 .img-reglas {
   z-index: 1;
-  position:fixed;
+  position: fixed;
   bottom: 500px;
   left: 700px;
   width: 150px;
   height: 150px;
-}
-.img-reglas.hidde {
   display: none;
 }
-#second{
+.img-reglas.hidde {
+  display: block;
+}
+#second {
   display: flex;
   width: 35%;
   justify-content: space-around;
   width: 50%;
   height: 50%;
   position: relative;
-  padding-top: 100PX;
+  padding-top: 100px;
   top: 100px;
-  
 }
-.boton-retry{
+.boton-retry {
   display: flex;
   flex-direction: column;
 }
@@ -189,12 +232,11 @@ footer {
   border-radius: 1000px;
   border: none;
 }
-.div2{
+.div2 {
   z-index: 0;
   height: 150px;
   width: 150px;
   border-radius: 100px;
-  
 }
 .img2 {
   z-index: 0;
@@ -206,18 +248,21 @@ footer {
   border-radius: 1000px;
   border: none;
 }
-span{
+span {
   color: white;
   font-size: 40px;
   padding-bottom: 30px;
   display: flex;
   justify-content: center;
 }
-.btn-repeat{
+.btn-repeat {
   height: 60px;
   width: 250px;
   font-size: 20px;
   border-radius: 15px;
   color: #182142;
   font-weight: 600;
+}
+@media only screen and (max-width){
+  
 }

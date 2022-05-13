@@ -15,50 +15,64 @@
             <h1 class="titulo">
                 ROCK <br> PAPER <br> SCISSORS
             </h1>
+            <div class="puntoscomp">
+                <h2 class="titulocomp">Score Comp</h2>
+                <p class="puntuacioncomp" id="puntuacioncomp">
+                    0
+                </p>
+            </div>
             <div class="puntos">
-                <h2 class="titulop">Score</h2>
-                <p class="puntuacion">
-                    
+                <h2 class="titulop">Score User</h2>
+                <p class="puntuacion" id="puntuacion">
+                   0 
                 </p>
             </div>
         </header>
-
+        <article id="triangle">
+            <div class="line1">a</div>
+            <div class="line2">a</div>
+            <div class="line3">a</div>
+        </article>
         <section id="elementos">
             <div class="img-reglas">
                 <img src="src/desktop-rules-modal.jpg" alt="img">
             </div>
             <div class="fondo-azul">
-                <button class="btn-papel" id="papel" onclick="IniciarJuego(1)"><img src="src/icon-paper.svg" alt=""></button>
+                <button class="btn-papel" id="papel" onclick="IniciarJuego(1)"><img src="src/icon-paper.svg"
+                        alt=""></button>
             </div>
             <div class="fondo-rojo">
-                <button class="btn-piedra" id="piedra" onclick="IniciarJuego(2)"><img src="src/icon-rock.svg" alt=""></button>
+                <button class="btn-piedra" id="piedra" onclick="IniciarJuego(2)"><img src="src/icon-rock.svg"
+                        alt=""></button>
             </div>
             <div class="fondo-amarillo">
-                <button class="btn-tijera" id="tijera" onclick="IniciarJuego(3)"><img src="src/icon-scissors.svg" alt=""></button>
+                <button class="btn-tijera" id="tijera" onclick="IniciarJuego(3)"><img src="src/icon-scissors.svg"
+                        alt=""></button>
             </div>
         </section>
         <div id="second" style="display: none;">
-        <aside class="botones-left">
-            <div class="div1">
-                <button class="img1"><img src="src/icon-paper.svg" alt=""></button>
+            <aside class="botones-left">
+                <div class="div1">
+                    <button class="img1"><img src="src/icon-paper.svg" alt=""></button>
+                </div>
+            </aside>
+            <div class="boton-retry">
+                <span id="spnResult">
+                    
+                </span>
+                <button class="btn-repeat" onclick="ReiniciarJuego()">Volver a jugar</button>
             </div>
-        </aside>
-        <div class="boton-retry">
-            <span id="spnResult">
-            </span>
-            <button class="btn-repeat" onclick="ReiniciarJuego()">Volver a jugar</button>
+            <aside class="botones-rigth">
+                <div class="div2">
+                    <button class="img2"><img src="src/icon-paper.svg" alt=""></button>
+                </div>
+            </aside>
         </div>
-        <aside class="botones-rigth">
-            <div class="div2">
-                <button class="img2""><img src="src/icon-paper.svg" alt=""></button>
+        <footer>
+            <div>
+                <button class="btn-reglas" onclick="reglas()">Reglas </button>
             </div>
-        </aside>
-    </div>  
-    <footer>
-        <div>
-            <button class="btn-reglas" onclick="reglas()">Reglas </button>
-        </div>
-    </footer>
+        </footer>
     </main>
     <script src="src/javaScript.js"></script>
 </body>

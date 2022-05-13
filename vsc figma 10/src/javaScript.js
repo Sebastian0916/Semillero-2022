@@ -28,7 +28,9 @@ let cont2 = 0
   console.log("ganadas comp " + cont2)
   document.getElementById("elementos").style.display = "none";
   document.getElementById("second").style.display = "";
-  document.getElementsByClassName("puntuacion").innerText=cont1
+  document.getElementById("triangle").style.display="none"
+  document.getElementById("puntuacion").innerText=cont1
+  document.getElementById("puntuacioncomp").innerText=cont2
   const img1 = document.getElementsByClassName('img1')[0].getElementsByTagName("img")[0]
   const img2 = document.getElementsByClassName('img2')[0].getElementsByTagName("img")[0]
   var sourceimg = tipo==1?"src/icon-paper.svg":tipo==2?"src/icon-rock.svg": "src/icon-scissors.svg"
@@ -36,7 +38,6 @@ let cont2 = 0
   var sourceimg2 = comp ==1?"src/icon-paper.svg":comp==2?"src/icon-rock.svg": "src/icon-scissors.svg"
   img2.setAttribute("src", sourceimg2)
   document.getElementById("spnResult").innerText=resultado
-
 
   var colorImg = tipo==1?"fondo-azul":tipo==2?"fondo-rojo2": "fondo-amarillo"
   var imgParent1 =  img1.parentElement.parentElement;
@@ -56,6 +57,8 @@ let cont2 = 0
 function ReiniciarJuego(){
     document.getElementById("elementos").style.display = "";
     document.getElementById("second").style.display = "none";
+    document.getElementById("triangle").style.display=""
+
 }
 
 function getRndInteger() {
@@ -73,42 +76,5 @@ function reglas() {
 
 
 
-function IniciarJuego(tipo, comp) {
-    comp = 1;
-    switch (tipo) {
-      case 1:
-        if (comp == 1) {
-          console.log("empate");
-        }
-        if (comp == 2) {
-          console.log("gano");
-        }
-        if (comp == 3) {
-          console.log("pierde");
-        }
-        break;
-      case 2:
-        if (comp == 1) {
-          console.log("pierde");
-        }
-        if (comp == 2) {
-          console.log("empate");
-        }
-        if (comp == 3) {
-          console.log("gana");
-        }
-        break;
-      case 3:
-        if (comp == 1) {
-          console.log("gana");
-        }
-        if (comp == 2) {
-          console.log("pierde");
-        }
-        if (comp == 3) {
-          console.log("empate");
-        }
-         break;
-     }
-  }
+
   
