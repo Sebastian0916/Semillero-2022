@@ -1,5 +1,6 @@
-let cont1 = 0
-let cont2 = 0
+let contadorUser = 0
+let contadorPc = 0
+
  function IniciarJuego(tipo) {
   const comp = getRndInteger();
   let resultado = "";
@@ -7,30 +8,37 @@ let cont2 = 0
   switch (tipo) {
     case 1:
      resultado = comp == 1 ? "EMPATE" : comp == 2 ? "TU GANAS" : "TU PIERDES";
-     cont1 = cont1 +(comp ==  1 || comp == 3 ? 0 : 1)
-     cont2 = cont2 +(comp ==  1 || comp == 2 ? 0 : 1)
+     contadorUser = contadorUser +(comp ==  1 || comp == 3 ? 0 : 1)
+     contadorPc = contadorPc +(comp ==  1 || comp == 2 ? 0 : 1)
       console.log(resultado);
       break;
     case 2:
      resultado = comp == 1 ? "TU PIERDES" : comp == 2 ? "EMPATE" : "TU GANAS";
-     cont1 = cont1 +(comp ==  1 || comp == 2 ? 0 : 1)
-     cont2 = cont2 +(comp ==  3 || comp == 2 ? 0 : 1)
+     contadorUser = contadorUser +(comp ==  1 || comp == 2 ? 0 : 1)
+     contadorPc = contadorPc +(comp ==  3 || comp == 2 ? 0 : 1)
       console.log(resultado);
       break;
     case 3:
      resultado = comp == 1 ? "TU GANAS" : comp == 2 ? "TU PIERDES" : "EMPATE";
-     cont1 = cont1 +(comp ==  2 || comp == 3 ? 0 : 1)
-     cont2 = cont2 +(comp ==  1 || comp == 3 ? 0 : 1)
+     contadorUser = contadorUser +(comp ==  2 || comp == 3 ? 0 : 1)
+     contadorPc = contadorPc +(comp ==  1 || comp == 3 ? 0 : 1)
       console.log(resultado);
       break;
   }
-  console.log("ganadas usuario " + cont1)
-  console.log("ganadas comp " + cont2)
+  console.log("ganadas usuario " + contadorUser)
+  console.log("ganadas comp " + contadorPc)
+
+
   document.getElementById("elementos").style.display = "none";
   document.getElementById("second").style.display = "";
   document.getElementById("triangle").style.display="none"
-  document.getElementById("puntuacion").innerText=cont1
-  document.getElementById("puntuacioncomp").innerText=cont2
+  document.getElementById("puntuacion").innerText=contadorUser
+  document.getElementById("puntuacioncomp").innerText=contadorPc
+
+  
+document.getElementsByClassName("div1").style.display="fixed"
+
+
   const img1 = document.getElementsByClassName('img1')[0].getElementsByTagName("img")[0]
   const img2 = document.getElementsByClassName('img2')[0].getElementsByTagName("img")[0]
   var sourceimg = tipo==1?"src/icon-paper.svg":tipo==2?"src/icon-rock.svg": "src/icon-scissors.svg"
@@ -71,10 +79,3 @@ function reglas() {
   const imgreglas = document.getElementsByClassName("img-reglas")[0];
   imgreglas.classList.toggle("hidde");
 }
-
-
-
-
-
-
-  
