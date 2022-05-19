@@ -35,9 +35,7 @@ let contadorPc = 0
   document.getElementById("puntuacion").innerText=contadorUser
   document.getElementById("puntuacioncomp").innerText=contadorPc
 
-  
-document.getElementsByClassName("div1").style.display="fixed"
-
+  // document.querySelector('img1').style.display="none"
 
   const img1 = document.getElementsByClassName('img1')[0].getElementsByTagName("img")[0]
   const img2 = document.getElementsByClassName('img2')[0].getElementsByTagName("img")[0]

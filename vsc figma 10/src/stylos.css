@@ -27,11 +27,13 @@ header {
   justify-content: space-around;
   position: relative;
   top: 60px;
+  z-index: 1;
 }
 .titulo {
   display: flex;
   align-items: center;
   line-height: 45px;
+  z-index: 1;
 }
 .puntos {
   background-color: white;
@@ -184,7 +186,6 @@ footer {
   height: 50px;
   border-radius: 30px;
   font-size: 20px;
-  z-index: 1;
 }
 .img-reglas {
   z-index: 1;
@@ -211,9 +212,10 @@ footer {
 .boton-retry {
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 .div1 {
-  z-index: 1;
+  z-index: 0;
   height: 150px;
   width: 150px;
   border-radius: 100px;
@@ -229,7 +231,7 @@ footer {
   border: none;
 }
 .div2 {
-  z-index: 1;
+  z-index: 0;
   height: 150px;
   width: 150px;
   border-radius: 100px;
@@ -259,32 +261,32 @@ span {
   color: #182142;
   font-weight: 600;
   z-index: 1;
-}
-/* .botonesrigth:before {
-  content: "";
-  height: 900px;
-  width: 900px;
-  display: flex;
-  background-position: center;
-  background-repeat: no-repeat;
-  background: radial-gradient(
-  hsla(0, 0%, 95%, 0.664)0% 10%,
-  hsla(227, 18%, 79%, 0.521)10% 25%,
-  hsla(233, 16%, 80%, 0.411)25% 38%,
-  rgba(82, 84, 124, 0.753) 38% 50%,
-  rgba(40, 42, 103, 0.555) 50% 65%,
-  rgba(62, 63, 107, 0.281) 65% 80%,
-  rgba(46, 47, 88, 0.418) 80% 100%
-  );
-  z-index: 0;
-  border-radius: 50%;
-  position: absolute;
-  top: -270px;
-  left: 330px;
-  animation: 7s infinite animate-glow;
-  } */
 
-  .botonesleft:before{
+}
+.img1::before {
+  content: "";
+  height: 900px;
+  width: 900px;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: radial-gradient(
+  hsla(0, 0%, 95%, 0.664)0% 10%,
+  hsla(227, 18%, 79%, 0.521)10% 25%,
+  hsla(233, 16%, 80%, 0.411)25% 38%,
+  rgba(82, 84, 124, 0.753) 38% 50%,
+  rgba(40, 42, 103, 0.555) 50% 65%,
+  rgba(62, 63, 107, 0.281) 65% 80%,
+  rgba(46, 47, 88, 0.418) 80% 100%
+  );
+  z-index: 0;
+  border-radius: 50%;
+  /* position: absolute;
+  top: -275px;
+  left: 325px; */
+  animation: 7s infinite animate-glow;
+  }
+  .img2::before{
   content: "";
   display: flex;
   height: 900px;
@@ -302,9 +304,9 @@ span {
   );
   z-index: 0;
   border-radius: 50%;
-  position: absolute;
-  bottom: -190px;
-  right: 320px;
+  /* position: absolute;
+  top: -275px;
+  right: 325px; */
   opacity: 1;
   animation: 7s infinite animate-glow;
   }
