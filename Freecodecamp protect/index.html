@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #description {
+        width: 600px;
+        text-align: center;
+        font-weight: 800;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Formulario {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        position: relative;
+        left: 480px;
+        text-align: center;
+        
+    }
+
+    #name,
+    #email,
+    #number {
+        border-radius: 10px;
+        height: 30px;
+        outline: none;
+    }
+    .seleccion{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+
+<body>
+    <header>
+        <h1 id="title">Formulario</h1>
+        <p id="description">Un formulario HTML es una sección de un documento que contiene contenido normal, código,
+            elementos especiales llamados controles (casillas de verificación (checkboxes), radiobotones (radio
+            buttons), menúes, etc.), y rótulos (labels) en esos controles</p>
+    </header>
+    <form id="survey-form">
+        <div class="Formulario">
+            <label for="name" id="name-label">Nombre</label>
+            <input id="name" name="name" type="text" placeholder="Nombre" required></input>
+
+            <label for="email" id="email-label">Correo</label>
+            <input id="email" placeholder="Correo" type="email" name="email" required>
+
+            <label for="number" id="number-label">Edad</label>
+            <input id="number" type="number" placeholder="Numero" name="number" min="18" max="100" required>
+        </div>
+        
+            <label for="dropdown" id="model">Seleccione Marca De Carro</label>
+            <select id="dropdown">
+                <option value="Escoja">Opcion</option>
+                <option value="Mazda">Mazda</option>
+                <option value="Renault">Renault</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Buggati">Buggati</option>
+                <option value="Jaguar">Jaguar</option>
+            </select>
+        <label for="model-color" id="model-color">
+            Color del modelo:
+        </label>
+        <input type="radio" name="color" id="black" value="black">
+        <label for="model-color">Negro</label>
+
+        <input type="radio" name="color" id="blue" value="blue">
+        <label for="model-color">Azul</label>
+
+        <input type="radio" name="color" id="red" value="red">
+        <label for="model-color">Rojo</label>
+
+        <label for="features">
+            <> agregar facturas</>
+        </label>
+
+        <input type="checkbox" id="checkbox" name="features" value="Bugia">
+        <label for="checkbox"> Bugia de engrane - 10.000$</label>
+
+        <input type="checkbox" id="checkbox" name="features" value="Filtro">
+        <label for="checkbox"> Filtro de aire - 2.000$</label>
+
+        <input type="checkbox" id="checkbox" name="features" value="llanta">
+        <label for="checkbox"> llanta - 40.000$</label>
+
+        <label id="textarea">Comentario Adicional</label>
+
+        <textarea name="instrucciones" id="textarea" cols="30" rows="10"></textarea>
+
+        <button id="submit">Submit</button>
+
+        </textarea>
+    </form>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
