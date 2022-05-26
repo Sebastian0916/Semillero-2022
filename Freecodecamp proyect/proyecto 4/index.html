@@ -10,7 +10,38 @@
 </head>
 
 <body>
+<style>
+#navbar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 300px;
+    top: 0px;
+    left:0px;
+    color: black;
+    background-color: white;
+    padding: 75px 0;
+}
+main{
+    position: absolute;
+    left: 150px;
+}
+@media only screen and (max-width:1000px) {
+    #navbar{
+        width: 100px;
+    }
+}</style>
     <main id="main-doc">
+        <nav id="navbar">
+            <header>Paises</header>
+            <a class="nav-link" href="#Peru">Peru</a>
+            <a class="nav-link" href="#Colombia">Colombia</a>
+            <a class="nav-link" href="#Argentina">Argentina</a>
+            <a class="nav-link" href="#Uruguay">Uruguay</a>
+            <a class="nav-link" href="#Brazil">Brazil</a>
+
+        </nav>
         <section class="main-section" id="Peru">
             <header>Peru</header>
             <p>
@@ -27,70 +58,75 @@
                 </ul>
             </ul>
             </p>
-            <section class="main-section" id="Colombia">
-                <header>Colombia</header>
-                <p>
-                    <code>Hola Colombia!</code>
-                </p>
-                <p>
+        </section>
+        <section class="main-section" id="Colombia">
+            <header>Colombia</header>
+            <p>
+                <code>Hola Colombia!</code>
+            </p>
+            <p>
+            <ul>
+                <li>Meses Adecuados para visitar Colombia</li>
+                <li>Lugares populares</li>
                 <ul>
-                    <li>Meses Adecuados para visitar Colombia</li>
-                    <li>Lugares populares</li>
-                    <ul>
-                        <li>Monserrate</li>
-                        <li>Cartagena</li>
-                        <li>Santa Marta</li>
-                    </ul>
+                    <li>Monserrate</li>
+                    <li>Cartagena</li>
+                    <li>Santa Marta</li>
                 </ul>
-                </p>
-                <section class="main-section" id="Argentina">
-                    <header>Argentina</header>
-                    <p>
-                        <code>Hola Argentina!</code>
-                    </p>
-                    <p>
-                    <ul>
-                        <li>Meses Adecuados para visitar Argentina</li>
-                        <li>Lugares populares</li>
-                        <ul>
-                            <li>Luna Park</li>
-                            <li>Ovelisco de Buenos Aires</li>
-                            <li>La patagonia</li>
-                        </ul>
-                    </ul>
-                    </p>
-                    <section class="main-section" id="Uruguay">
-                        <header>Uruguay</header>
-                        <p>
-                            <code>Hola Uruguay!</code>
-                        </p>
-                        <p>
-                        <ul>
-                            <li>Meses Adecuados para visitar Uruguay</li>
-                            <li>Lugares populares</li>
-                            <ul>
-                                <li>Machupichu</li>
-                                <li>Cañon del colca</li>
-                                <li>Valle Sagrado</li>
-                            </ul>
-                        </ul>
-                        </p>
-                        <section class="main-section" id="Brazil">
-                            <header>Brazil</header>
-                            <p>
-                                <code>Hola Brazil!</code>
-                            </p>
-                            <p>
-                            <ul>
-                                <li>Meses Adecuados para visitar Brazil</li>
-                                <li>Lugares populares</li>
-                                <ul>
-                                    <li>Machupichu</li>
-                                    <li>Cañon del colca</li>
-                                    <li>Valle Sagrado</li>
-                                </ul>
-                            </ul>
-                            </p>
+            </ul>
+            </p>
+        </section>
+        <section class="main-section" id="Argentina">
+            <header>Argentina</header>
+            <p>
+                <code>Hola Argentina!</code>
+            </p>
+            <p>
+            <ul>
+                <li>Meses Adecuados para visitar Argentina</li>
+                <li>Lugares populares</li>
+                <ul>
+                    <li>Luna Park</li>
+                    <li>Ovelisco de Buenos Aires</li>
+                    <li>La patagonia</li>
+                </ul>
+            </ul>
+            </p>
+        </section>
+        <section class="main-section" id="Uruguay">
+            <header>Uruguay</header>
+            <p>
+                <code>Hola Uruguay!</code>
+            </p>
+            <p>
+            <ul>
+                <li>Meses Adecuados para visitar Uruguay</li>
+                <li>Lugares populares</li>
+                <ul>
+                    <li>Montevideo</li>
+                    <li>Punta del diablo</li>
+                    <li>Cabo Colonia</li>
+                </ul>
+            </ul>
+            </p>
+        </section>
+        <section class="main-section" id="Brazil">
+            <header>Brazil</header>
+            <p>
+                <code>Hola Brazil!</code>
+            </p>
+            <p>
+            <ul>
+                <li>Meses Adecuados para visitar Brazil</li>
+                <li>Lugares populares</li>
+                <ul>
+                    <li>Rio de janeiro</li>
+                    <li>Cristo redentor </li>
+                    <li>Catedral De Brazilia</li>
+                </ul>
+            </ul>
+            </p>
+        </section>
     </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
