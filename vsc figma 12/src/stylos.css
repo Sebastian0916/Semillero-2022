@@ -31,33 +31,46 @@ body {
   padding: 0 0 0 7.4%;
 }
 aside {
-padding-top: 12%;
-width: 600px;
+  padding-top: 12%;
+  width: 600px;
 }
-form{
-    border: solid 0.5px;
-    border-radius: 10px;
+form {
+  border: solid 0.5px;
+  border-radius: 10px;
 }
-.label1,.label2,.label3,.label4,.label5,.label6{
-    display: flex;
-    background-color: #EEEEEE;
-    width: 200px;
-    height: 30px;
-    padding-left: 10px;
-    color: black;
-    
+.label1,
+.label2,
+.label3,
+.label4,
+.label5,
+.label6 {
+  display: flex;
+  background-color: #eeeeee;
+  width: 200px;
+  height: 30px;
+  padding-left: 10px;
+  color: black;
 }
-.label1{
-    border-radius: 10px 0 0 0;
+.label1 {
+  border-radius: 10px 0 0 0;
 }
-.label6{
-    border-radius: 0 0 0 10px;
+.label6 {
+  border-radius: 0 0 0 10px;
 }
-.div1{
-    display: flex;
+.div1 {
+  display: flex;
 }
-.bola.left{
-margin-left: 20px;
-background-color: black;
-font-size: 100px;
+.bola {
+  background-color: white;
+  width: 20px;
+  z-index: 1;
+  height: 20px;
+  border-radius: 50px;
+  margin-top: 2px;
+  border: none;
+}
+.bola.hidde {
+  display: flex;
+  left: 100px;
+  background-color: black;
 }
