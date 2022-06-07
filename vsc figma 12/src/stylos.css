@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  color: #667788;
+}
+body {
+  padding-top: 70px;
+}
+.titulo {
+  padding-left: 150px;
+}
+.lineaBaja {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding-left: 100px;
+}
+.line {
+  width: 90%;
+  height: 3px;
+  margin-left: 5%;
+  background-color: #667788;
+}
+#menu {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 7.4%;
+}
+aside {
+padding-top: 12%;
+width: 600px;
+}
+form{
+    border: solid 0.5px;
+    border-radius: 10px;
+}
+.label1,.label2,.label3,.label4,.label5,.label6{
+    display: flex;
+    background-color: #EEEEEE;
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    color: black;
+    
+}
+.label1{
+    border-radius: 10px 0 0 0;
+}
+.label6{
+    border-radius: 0 0 0 10px;
+}
+.div1{
+    display: flex;
+}
+.bola.left{
+margin-left: 20px;
+background-color: black;
+font-size: 100px;
+}

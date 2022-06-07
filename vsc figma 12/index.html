@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/stylos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <h1 class="titulo">Subir Extracto Bancario</h1>
+    </div>
+    <hr class="line">
+    <div class="lineaBaja">
+        <p>Demo SAS NIT 85,133,458-9</p>
+        <p> 6/6/2022 8:33 pm</p>
+    </div>
+    <main id="menu">
+        <aside>
+            <form>
+                <div class="div1">
+                    <label for="archivo" class="label1">Archivo a procesar</label>
+                    <input type="file" id="archivo" name="archivo">
+                </div>
+                <hr style="height: 2px; background-color:black;">
+                <div class="div1">
+                    <label for="cero" class="label2">Archivo a cero</label>
+                    <div class="fondo"
+                        style="background-color: gray; border-radius:50px; width: 50px;height: 25px;z-index: 0;">
+                        <div class="bola"
+                            style="background-color: white;width:20px; z-index: 1;height: 20px;border-radius: 50px;margin-top: 2px;">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="div1">
+                    <label for="fecha" class="label3">Mes</label>
+                    <input type="date" name="fecha" id="fecha">
+                </div>
+                <hr>
+                <div class="div1">
+                    <label for="banco" class="label4">Banco</label>
+                    <select name="banco" id="banco">
+                        <option value="carro">--Seleccione--</option>
+                    </select>
+                </div>
+                <hr>
+                <div class="div1">
+                    <label for="cuenta" class="label5">Cuenta</label>
+                    <select name="" id="">
+                        <option value="carro">--Seleccione--</option>
+                    </select>
+                </div>
+                <hr style="width: 100%;margin-right:30px;">
+                <div class="div1">
+                    <label for="moneda" class="label6">Moneda de reconciliación</label>
+                    <select name="moneda" id="moneda">
+                        <option value="carro">--Seleccione--</option>
+                    </select>
+                </div>
+            </form>
+        </aside>
+        <section class="derecha" id="boton">
+            <button class="btn"
+                style="background-color: #473e7e;border:none;border-radius: 5px; height: 30px;width: 90px;margin-top: 80px; color: white;">Subir
+                archivo</button>
+        </section>
+    </main>
+    <script src="src/main.js"></script>
+</body>
+
+</html>
