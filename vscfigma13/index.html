@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/stylos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="container">
+        <header id="header">
+            <h1 class="titulo">CONFIGURACION DE RIESGOS</h1>
+        </header>
+        <div style="display: flex;">
+            <aside id="opciones">
+                <button id="impacto" onclick="impacto()"> IMPACTOS</button>
+                <button id="probabilidades" onclick="probabilidades()">PROBABILIDADES</button>
+                <button id="tipo" onclick="tipo()">TIPO DE RIESGO</button>
+                <button id="evaluacion" onclick="evaluacion()">EVALUACIÓN DEL RIESGO</button>
+            </aside>
+            <section id="derecha">
+                <header id="encabezado">
+                    <h1 class="titulo2">Evaluacion De Riesgos</h1>
+                    <button id="nuevo" onclick="nuevo()">Nuevo</button>
+                </header>
+                <table border="1" id="tablaUno">
+                    <tr>
+                        <td>Codigo</td>
+                        <td>Descripción</td>
+                        <td>Valor</td>
+                        <td>Acción</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Bajo</td>
+                        <td>2</td>
+                        <td class="img">
+                            <img src="imagenes/pen.png" alt="esfero" class="editar">
+                            <img src="imagenes/bin.png" alt="basura" class="borrar">
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" style="display: none;" id="tablaDos">
+                    <tr>
+                        <td>Codigo</td>
+                        <td>Descripción</td>
+                        <td>Valor</td>
+                        <td>Acción</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Mediano</td>
+                        <td>2</td>
+                        <td class="img">
+                            <img src="imagenes/pen.png" alt="esfero" class="editar">
+                            <img src="imagenes/bin.png" alt="basura" class="borrar">
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" style="display: none;" id="tablaTres">
+                    <tr>
+                        <td>Codigo</td>
+                        <td>Descripción</td>
+                        <td>Valor</td>
+                        <td>Acción</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>JODER</td>
+                        <td>2</td>
+                        <td class="img">
+                            <img src="imagenes/pen.png" alt="esfero" class="editar">
+                            <img src="imagenes/bin.png" alt="basura" class="borrar">
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" style="display: none;" id="tablaCuatro">
+                    <tr>
+                        <td>Codigo</td>
+                        <td>Descripción</td>
+                        <td>Valor</td>
+                        <td>Acción</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>alto</td>
+                        <td>2</td>
+                        <td class="img">
+                            <img src="imagenes/pen.png" alt="esfero" class="editar">
+                            <img src="imagenes/bin.png" alt="basura" class="borrar">
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <article id="cuadro">
+                <header class="tituloCuadro">
+                    <h1 class="titulo3">Evaluacion de riesgo</h1>
+                    <button class="cerrar">X</button>
+                </header>
+                <form action="" id="formulario">
+                    <div>
+                        <label for="descripcion">Descripción:</label>
+                        <input type="text" name="descrpcion" id="descripcion" style="margin-left: 10px;">
+                    </div>
+                    <div>
+                        <label for="valorminimo">Valor Mínimo</label>
+                        <input type="text" name="valorminimo" id="valorMin"style="margin-left: 2px;">
+                    </div>
+                    <div>
+                        <label for="valormaximo">Valor Maximo</label>
+                        <input type="text" name="valormaximo" id="valorMax" style="margin-left: 1px;">
+                    </div>
+                </form>
+                <button class="guardar">Guardar</button>
+            </article>
+        </div>
+    </main>
+    <script src="src/main.js"></script>
+</body>
+
+</html>

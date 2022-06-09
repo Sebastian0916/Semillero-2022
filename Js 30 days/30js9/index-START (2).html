@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Whack A Mole!</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Whack-a-mole! <span class="score">0</span></h1>
+  <button onclick="StarGame()">Star</button>
+
+  <div class="game">
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+  </div>
+
+  <script>
+    const scoreBoard = document.getElementsByClassName("score")
+    const holes = document.querySelectorAll('.hole')
+    const mole = document.querySelectorAll('.mole')
+    let lastHole;
+    let timeUp = false;
+    let score
+
+    function RamdomTime(min, max) {
+      return Math.round(Math.random() * (max - min) + min)
+    }
+    function RamdomHole(holes) {
+      const idx = RamdomTime(0, holes.length - 1);
+      const hole = holes[idx]
+      if (hole === lastHole) {
+        return RamdomHole(holes)
+        console.log("son iguales")
+      }
+      lastHole = hole
+      return idx
+    }
+    function peep() {
+      const tiempo = RamdomTime(200, 1000)
+      const hole = RamdomHole(holes)
+      holes[hole].classList.add("up");
+      console.log(tiempo, hole)
+      setTimeout(() => {
+        holes[hole].classList.remove('up');
+        if (!timeUp) peep()
+      }, tiempo)
+    }
+    function StarGame() {
+      scoreBoard.textcontent = 0
+      timeUp = false
+      score = 0;
+      peep();
+      setTimeout(() => {
+        timeUp = true
+      }, 10000)
+    }
+    function bonk(e) {
+      if (!e.isTrusted) return;
+      score++;
+      this.parentNode.classList.remove('up')
+      console.log(e)
+    }
+
+    mole.forEach(moles => moles.addEventListener('click', bonk))
+  </script>
+</body>
+
+</html>
