@@ -8,9 +8,10 @@
   position: absolute;
   display: flex;
   flex-direction: column;
+  margin-left: 100px;
 }
 #header {
-  font-size: 15px;
+  font-size: 3rem;
   margin: 50px 0 0 120px;
   color: #0074cc;
 }
@@ -49,7 +50,8 @@
 }
 .titulo2 {
   font-weight: 100;
-  padding-top: 10px;
+  
+  font-size: 1.5em;
 }
 #nuevo {
   background-color: #0074cc;
@@ -61,13 +63,14 @@
   margin: 5px 20px 0 0;
   height: 3em;
   
+  
 }
 table {
   margin-top: 10px;
   border: none;
   width: 53vw;
 }
-tr {
+th {
   text-align: center;
 }
 img {
@@ -90,9 +93,10 @@ img {
   box-shadow: 3px 3px#d4d4d4;
   border: solid #d4d4d4 1px;
   display: none;
+  
 }
 #cuadro.hidde{
-  display: block;
+  display: flex;
 }
 .tituloCuadro {
   display: flex;
@@ -106,7 +110,7 @@ img {
   font-size: 20px;
   margin-top: 3px;
 }
-.cerrar {
+#cerrar {
   width: 20px;
   height: 20px;
   margin: 4px 0 0 60px;
@@ -117,7 +121,7 @@ img {
   border-radius: 3px;
 }
 form {
-  margin: 10px 0 0 30px;
+  margin: 30px 0 0 30px;
   display: flex;
   flex-direction: column;
   height: 15vh;

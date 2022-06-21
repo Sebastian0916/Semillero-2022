@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/stylos.css">
+
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="src/stylos.css">
 </head>
 
-<body>
+<body id="body">
     <main id="container">
         <header id="header">
-            <h1 class="titulo">CONFIGURACION DE RIESGOS</h1>
+            <p class="titulo">CONFIGURACION DE RIESGOS</p>
         </header>
         <div style="display: flex;">
             <aside id="opciones">
-                <button id="impacto" onclick="impacto()"> IMPACTOS</button>
-                <button id="probabilidades" onclick="probabilidades()">PROBABILIDADES</button>
-                <button id="tipo" onclick="tipo()">TIPO DE RIESGO</button>
-                <button id="evaluacion" onclick="evaluacion()">EVALUACIÓN DEL RIESGO</button>
+                <button id="impacto"  class="BotonNavegacion" onclick="impacto()"> IMPACTOS</button>
+                <button id="probabilidades" class="BotonNavegacion" onclick="probabilidades()">PROBABILIDADES</button>
+                <button id="tipo" class="BotonNavegacion" onclick="tipo()">TIPO DE RIESGO</button>
+                <button id="evaluacion" class="BotonNavegacion" onclick="evaluacion()">EVALUACIÓN DEL RIESGO</button>
             </aside>
             <section id="derecha">
                 <header id="encabezado">
@@ -27,94 +31,91 @@
                     <button id="nuevo" onclick="nuevo()">Nuevo</button>
                 </header>
                 <table border="1" id="tablaUno">
-                    <tr>
-                        <td>Codigo</td>
-                        <td>Descripción</td>
-                        <td>Valor</td>
-                        <td>Acción</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Bajo</td>
-                        <td>2</td>
-                        <td class="img">
-                            <img src="imagenes/pen.png" alt="esfero" class="editar">
-                            <img src="imagenes/bin.png" alt="basura" class="borrar">
-                        </td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripción</th>
+                            <th>Valor</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
                 </table>
                 <table border="1" style="display: none;" id="tablaDos">
-                    <tr>
-                        <td>Codigo</td>
-                        <td>Descripción</td>
-                        <td>Valor</td>
-                        <td>Acción</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Mediano</td>
-                        <td>2</td>
-                        <td class="img">
-                            <img src="imagenes/pen.png" alt="esfero" class="editar">
-                            <img src="imagenes/bin.png" alt="basura" class="borrar">
-                        </td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripción</th>
+                            <th>Valor</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
                 </table>
                 <table border="1" style="display: none;" id="tablaTres">
-                    <tr>
-                        <td>Codigo</td>
-                        <td>Descripción</td>
-                        <td>Valor</td>
-                        <td>Acción</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>JODER</td>
-                        <td>2</td>
-                        <td class="img">
-                            <img src="imagenes/pen.png" alt="esfero" class="editar">
-                            <img src="imagenes/bin.png" alt="basura" class="borrar">
-                        </td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripción</th>
+                            <th>Valor</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
                 </table>
                 <table border="1" style="display: none;" id="tablaCuatro">
-                    <tr>
-                        <td>Codigo</td>
-                        <td>Descripción</td>
-                        <td>Valor</td>
-                        <td>Acción</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>alto</td>
-                        <td>2</td>
-                        <td class="img">
-                            <img src="imagenes/pen.png" alt="esfero" class="editar">
-                            <img src="imagenes/bin.png" alt="basura" class="borrar">
-                        </td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripción</th>
+                            <th>Valor</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
                 </table>
             </section>
+
             <article id="cuadro">
                 <header class="tituloCuadro">
                     <h1 class="titulo3">Evaluacion de riesgo</h1>
-                    <button class="cerrar">X</button>
+                    <button id="cerrar" onclick="cerrar()">X</button>
                 </header>
                 <form action="" id="formulario">
-                    <div>
-                        <label for="descripcion">Descripción:</label>
-                        <input type="text" name="descrpcion" id="descripcion" style="margin-left: 10px;">
+                    <div id="codigo">
+                        <label for="codigo" id="codigo">Codigo:</label>
+                        <input type="number" name="codigo" id="TxtCodigo" style="margin-left: 10px;" required>
                     </div>
-                    <div>
-                        <label for="valorminimo">Valor Mínimo</label>
-                        <input type="text" name="valorminimo" id="valorMin"style="margin-left: 2px;">
+                    <div id="descripcion">
+                        <label for="descripcion" id="descripcion">Descripción:</label>
+                        <input type="text" name="descrpcion" id="TxtDescripcion" required>
                     </div>
-                    <div>
-                        <label for="valormaximo">Valor Maximo</label>
-                        <input type="text" name="valormaximo" id="valorMax" style="margin-left: 1px;">
+                    <div id="valor">
+                        <label for="Valor" id="valor">Valor:</label>
+                        <input type="number" name="valor" id="TxtValor" style="margin-left: 10px;" required>
                     </div>
+                    <!-- <div id="interno">
+                        <label for="Interno" id="interno">Interno:</label>
+                        <input type="number" name="interno" id="TxtInterno" style="margin-left: 10px;" required>
+                    </div>
+                    <div id="valorMin">
+                        <label for="valorminimo" id="valorMin">Valor Mínimo</label>
+                        <input type="number" name="valorMinimo" id="TxtValorMin" style="margin-left: 2px;" required>
+                    </div>
+                    <div id="valorMax">
+                        <label for="valormaximo" id="valorMax">Valor Maximo</label>
+                        <input type="number" name="valorMaximo" id="TxtValorMax" style="margin-left: 1px;" required>
+                    </div> -->
                 </form>
-                <button class="guardar">Guardar</button>
+                <button class="guardar" onclick="Guardar()">Guardar</button>
             </article>
         </div>
     </main>
