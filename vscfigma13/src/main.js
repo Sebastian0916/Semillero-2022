@@ -141,9 +141,9 @@ function Actualizar(editId) {
   let datoObjArrEdit = JSON.parse(localStorage.getItem(keyLocalStorage));
   let datoIndexArrEdit = datoObjArrEdit.findIndex((element) => element.editId == editId);
   let dt =  datoObjArrEdit[datoIndexArrEdit];
-  // dt.codigo = ""
-  // dt.descripcion = ""
-  // dt.valor = ""
+  dt.codigo = ""
+  dt.descripcion = ""
+  dt.valor = ""
   console.log(dt)
   let datoJsonEdit = JSON.stringify(datoObjArrEdit);
   localStorage.setItem(keyLocalStorage, datoJsonEdit);
