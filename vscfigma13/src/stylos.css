@@ -148,4 +148,7 @@ input:hover {
   background-color: #0074cc;
   color: white;
 
+} 
+td, tr, th {
+  text-align: center;
 }
