@@ -1,4 +1,4 @@
-window.localStorage.clear();
+// window.localStorage.clear();
 let tipoLocalStor = "impacto";
 let keyLocalStorage = ""
 function impacto() {
@@ -87,7 +87,7 @@ function Guardar() {
   for (let i = 0; i < cantidad; i++) {
     let fila = document.createElement("tr");
     fila.setAttribute("dato-id",i);
-
+    fila.id = i;
     let celdaCodigo = document.createElement("td");
     let nodoCeldaCodigo = document.createTextNode(aId[i].codigo);
     celdaCodigo.appendChild(nodoCeldaCodigo);
@@ -116,7 +116,7 @@ function Guardar() {
     celdaAccionPen.addEventListener("click", (editar) => {
       document.getElementById("cuadro").style.display="block"
       let celda = editar.target.parentNode.parentNode
-      let CeldaEditar = celda.getAttribute("dato.id")
+      let CeldaEditar = celda.getAttribute("dato-id")
       Actualizar(CeldaEditar)
     });
     celdaAccionTrash.addEventListener("click", (event) => {
@@ -137,13 +137,13 @@ function Eliminar(datoId) {
   localStorage.setItem(keyLocalStorage, datoJson);
 }
 
-function Actualizar(editId) {
+function Actualizar() {
   let datoObjArrEdit = JSON.parse(localStorage.getItem(keyLocalStorage));
-  let datoIndexArrEdit = datoObjArrEdit.findIndex((element) => element.editId == editId);
+  let datoIndexArrEdit = datoObjArrEdit.findIndex((element) => element.id == id);
   let dt =  datoObjArrEdit[datoIndexArrEdit];
-  dt.codigo = ""
-  dt.descripcion = ""
-  dt.valor = ""
+  // dt.codigo = ""
+  // dt.descripcion = ""
+  // dt.valor = ""
   console.log(dt)
   let datoJsonEdit = JSON.stringify(datoObjArrEdit);
   localStorage.setItem(keyLocalStorage, datoJsonEdit);
