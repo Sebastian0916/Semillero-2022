@@ -2,7 +2,7 @@ let contadorUser = 0
 let contadorPc = 0
 
  function IniciarJuego(tipo) {
-  const comp = getRndInteger();
+  const comp = RandomWords();
   let resultado = "";
   console.log("la computadora escogio " + comp);
   switch (tipo) {
@@ -67,7 +67,7 @@ function ReiniciarJuego(){
 
 }
 
-function getRndInteger() {
+function RandomWords() {
   const max = 3;
   const min = 1;
   return Math.floor(Math.random() * (max - min + 1)) + min;
