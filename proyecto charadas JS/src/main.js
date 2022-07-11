@@ -23,20 +23,20 @@ function closeRules() {
 indexGame.addEventListener("click", displaySettings);
 rulesBtn.addEventListener("click", displayRules);
 closePopup.addEventListener("click", closeRules);
-var numerosqYaSalieron = [];
-var yaSalieronTodos = false;
-function json() {
+
+//lOGICA DE LAS PALABRAS
+let numerosqYaSalieron = [];
+let yaSalieronTodos = false;
+function wordsJs() {
   if (!yaSalieronTodos) {
     fetch("./src/wordsJS.JSON")
       .then((respuesta) => {
         return respuesta.json();
       })
       .then(function (jsonData) {
-        const MyData = jsonData;
         if (!yaSalieronTodos) {
-         
           let aleatorio = Math.floor(
-            (Math.random() * Object.keys(jsonData).length)+1            
+            Math.random() * Object.keys(jsonData).length + 1
           ).toString();
           var lenghtJs = Object.keys(jsonData).length;
           while (
@@ -45,7 +45,7 @@ function json() {
             yaSalieronTodos == false
           ) {
             aleatorio = Math.floor(
-              (Math.random() * Object.keys(jsonData).length)+1
+              Math.random() * Object.keys(jsonData).length + 1
             ).toString();
           }
           if (numerosqYaSalieron.length == Object.keys(jsonData).length) {
@@ -57,7 +57,6 @@ function json() {
 
             console.log("la palablar es " + resp);
           }
-       
         } else {
           console.log("Ya salieron todos los elementos del array");
         }
@@ -65,6 +64,47 @@ function json() {
   } else {
     console.log("Ya salieron todos los elementos del array");
   }
-  //console.log(" la palabra es " + random);
 }
-json()
+wordsJs();
+
+let numerosqueYaSalieron = [];
+let yaSalieronTodas = false;
+function wordsEnglis() {
+  if (!yaSalieronTodas) {
+    fetch("./src/wordsEnglish.json")
+      .then((respuesta) => {
+        return respuesta.json();
+      })
+      .then(function (jsonData) {
+        if (!yaSalieronTodas) {
+          let aleatorio = Math.floor(
+            Math.random() * Object.keys(jsonData).length + 1
+          ).toString();
+          var lenghtJs = Object.keys(jsonData).length;
+          while (
+            numerosqueYaSalieron.filter((num) => num == aleatorio).length > 0 &&
+            numerosqueYaSalieron.length < lenghtJs &&
+            yaSalieronTodas == false
+          ) {
+            aleatorio = Math.floor(
+              Math.random() * Object.keys(jsonData).length + 1
+            ).toString();
+          }
+          if (numerosqueYaSalieron.length == Object.keys(jsonData).length) {
+            console.log("Ya salieron todos los elementos del array preubas");
+            yaSalieronTodos = true;
+          } else {
+            var resp = jsonData["wordsEnglis" + aleatorio];
+            numerosqueYaSalieron.push(aleatorio);
+
+            console.log(resp);
+          }
+        } else {
+          console.log("Ya salieron todos los elementos del array");
+        }
+      });
+  } else {
+    console.log("Ya salieron todos los elementos del array");
+  }
+}
+wordsEnglis()
