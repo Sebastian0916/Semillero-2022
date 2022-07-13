@@ -19,6 +19,7 @@ const validarNit = function () {
     compania.style.borderColor = "#4ED34C";
   } else {
     compania.style.borderColor = "#FD2D5F";
+    alert("falta texto")
   }
 };
 compania.addEventListener("keydown", validarNit);
