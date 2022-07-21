@@ -1,4 +1,4 @@
-// window.localStorage.clear();
+  // window.localStorage.clear();
 let tipoLocalStor = "impacto";
 let keyLocalStorage = ""
 function impacto() {

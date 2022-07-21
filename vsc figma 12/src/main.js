@@ -1,6 +1,6 @@
 function bolita() {
   const cero = document.getElementsByClassName("bola")[0];
-  cero.classList.toggle("hidde");
+  cero.classList.toggle("hidde"); 
 }
 let arrayPlayData = [];
 fetch("./src/playData.json")
@@ -15,5 +15,5 @@ fetch("./src/playData.json")
         opt.appendChild(textOpt);
       document.getElementById("moneda").appendChild(opt);
       }
+      console.log(jsondata)
   }) 
-      

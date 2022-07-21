@@ -162,7 +162,7 @@ function tHeadMaker(option) {
 }
 function tBodyMaker(currentData, currentOption) {
   currentData.map((data) => {
-    if (currentOption == "EVALUACION DE RIESGO") {
+    if (currentOption == "EVALUACION DE RIESGO") {  
       tbody.innerHTML += `
             <tr>
                 <td>${data.code}</td>
