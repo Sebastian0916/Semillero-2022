@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #play,
+        #stop {
+            display: inline-block;
+            padding: 16px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        iframe {
+            display: none;
+        }
+    </style>
+    <div id="despertador">
+        <span id="play">play</span>
+        <span id="stop">stop</span>
+
+    </div>
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("play").addEventListener("click", sonarPajaros);
+            document.getElementById("stop").addEventListener("click", callarPajaros);
+        });
+
+        function sonarPajaros() {
+            var sonido = document.createElement("iframe");
+            sonido.setAttribute("src", "prueba/temporizador.wav");
+            document.body.appendChild(sonido);
+            let play = document.getElementById("play")
+            play.removeEventListener("click", sonarPajaros);
+        }
+
+        function callarPajaros() {
+            var iframe = document.getElementsByTagName("iframe");
+
+            if (iframe.length > 0) {
+                iframe[0].parentNode.removeChild(iframe[0]);
+                document.getElementById("play").addEventListener("click", sonarPajaros);
+            }
+        }
+    </script>
+</body>
+
+</html>
