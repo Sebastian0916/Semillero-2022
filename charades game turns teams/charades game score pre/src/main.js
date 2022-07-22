@@ -3,6 +3,7 @@ const main = document.querySelector("main");
 const sectionSettings = document.getElementById("setting");
 const footer = document.querySelector("footer");
 const sectionStarGame = document.getElementById("startGameSection");
+
 const rulesBtn = document.querySelector("#btnRules");
 const modalScore = document.getElementById("poopScore");
 const modalRules = document.getElementById("poop");
@@ -10,17 +11,24 @@ const btnStarGame = document.querySelector(".toStartGame");
 let randomWord = document.getElementById("randomWord");
 let header = document.getElementById("header");
 let nextWordBtn = document.getElementById("buttonNextWord");
-
 let btnPoint = [...document.querySelectorAll(".btnPoint")];
 let resp;
 let numerosqYaSalieron = [];
-let yaSalieronTodos = false;
-
+let yaSalieronTodos;
 let inputValues = [...document.querySelectorAll("input")];
 let newValues = ["0", "0"];
 let firstTeam = true;
-//funciones
 
+let scoreLeft = [...document.querySelectorAll(".score_groupOne")];
+let scoreRight = [...document.querySelectorAll(".score_groupTwo")];
+let pointG1 = 0;
+let pointG2 = 0;
+let incorrect_groupB = document.getElementById("incorrect_groupB");
+let incorrect_groupA = document.getElementById("incorrect_groupA");
+let pointIncorrectGa = 0;
+let pointIncorrectGb = 0;
+
+//funciones
 function wordsRandom(archivoJSON) {
   //let archivoJSON = tipo == 1 ? "wordsJS" : "wordsEnglish";
   if (!yaSalieronTodos) {
@@ -50,7 +58,6 @@ function wordsRandom(archivoJSON) {
             resp = jsonData[archivoJSON + aleatorio];
             numerosqYaSalieron.push(aleatorio);
             document.getElementById("randomWord").innerHTML = resp;
-            console.log(resp);
           }
         } else {
           console.log("Ya salieron todos los elementos del array");
@@ -89,9 +96,9 @@ function llenarCamposScoreBoard(newValues) {
 }
 function TimerQuestion(newValues) {
   let temporizador = document.getElementById("temporizador");
+  let h2 = document.getElementById("timeResult");
   let segundos;
   segundos = newValues[3];
-  let h2 = document.getElementById("timeResult");
   let time = setInterval(() => {
     segundos--;
     temporizador.innerText = `Time: ${segundos}`;
@@ -120,18 +127,28 @@ function TimerQuestion(newValues) {
           btn.style.display = "none";
         } else {
           btn.style.display = "flex";
-          let ruido4 = document.querySelector(".sonidoFour");
-          let audioEtiqueta4 = document.querySelector("#audioFour");
-          ruido4.addEventListener("click", () => {
-            audioEtiqueta4.setAttribute("src", "src/puntoMal.wav");
-            audioEtiqueta4.play();
-          });
         }
       });
       nextWordBtn.style.display = "flex";
       nextWordBtn.style.backgroundColor = "red";
+      ruido4.click();
+      if (header.innerText == `${newValues[4]}` && segundos == 0) {
+        pointIncorrectGa++;
+        incorrect_groupA.innerHTML = pointIncorrectGa;
+        pointG1--;
+        scoreLeft.forEach((p) => {
+          p.innerText = pointG1;
+        });
+      } else if (header.innerText == `${newValues[5]}` && segundos == 0) {
+        pointIncorrectGb++;
+        incorrect_groupB.innerHTML = pointIncorrectGa;
+        pointG2--;
+        scoreRight.forEach((p) => {
+          p.innerText = pointG2;
+        });
+      }
     }
-  }, 100);
+  }, 1000);
 }
 let ruido = document.querySelector(".sonido1");
 let audioEtiqueta = document.querySelector("#audio1");
@@ -145,7 +162,6 @@ audioEtiqueta2.setAttribute("src", "./src/inicio.wav");
 ruido2.addEventListener("click", () => {
   audioEtiqueta2.play();
 });
-
 function start(resp) {
   let secondGroup = document.querySelector("#secondGroup");
   let first = document.querySelector("#firstGroup");
@@ -157,7 +173,7 @@ function start(resp) {
   };
   function validateInput({ target }) {
     expReg[`${target.name}`].test(target.value)
-      ? target.classList.add("incomplete")
+      ? target.classList.add("complete")
       : target.classList.remove("incomplete");
   }
   btnNextSite.forEach((btn) => {
@@ -183,11 +199,8 @@ function start(resp) {
         footer.style.display = "none";
         sectionStarGame.style.display = "flex";
         e.target.setAttribute.name != "starGame" ? e.preventDefault() : "";
-        if (btnPoint.length > 0) {
-          btnPoint.forEach((btn) => {
-            btn.addEventListener("click", updateGame(newValues, btn.id));
-          });
-        }
+        points(newValues);
+        nextWordBtn.addEventListener("click", updateGame(newValues));
       }
       if (document.querySelector(".words:checked") != null) {
         var chkWordsJS = document.querySelector(".words:checked").value;
@@ -202,13 +215,32 @@ ruido3.addEventListener("click", () => {
   audioEtiqueta3.setAttribute("src", "src/puntoBien.wav");
   audioEtiqueta3.play();
 });
-
+let ruido4 = document.querySelector(".sonido4");
+let audioEtiqueta4 = document.querySelector("#audio4");
+ruido4.addEventListener("click", () => {
+  audioEtiqueta4.setAttribute("src", "./src/puntoMal.wav");
+  audioEtiqueta4.play();
+});
+let ruido5 = document.querySelector(".sonido5");
+let audioEtiqueta5 = document.querySelector(".audio5");
+audioEtiqueta5.setAttribute("src", "./src/cambioPalabra.wav");
+ruido5.addEventListener("click", () => {
+  audioEtiqueta5.play();
+});
 const buttonHome = document.querySelector(".buttonHome");
 buttonHome.addEventListener("click", () => {
-  main.style.display = "flex";
-  sectionStarGame.style.display = "none";
-  location.reload();
+  let opcion = confirm("Desea salir del juego Aceptar/Cancelar")
+  if (opcion == true) {
+    sectionStarGame.style.display = "none";
+    location.reload();
+    return true
+  }
+  else{
+    return false
+    
+  }
 });
+
 //lOGICA DE LAS PALABRAS
 function display() {
   const openPoopUp = [...document.querySelectorAll(".openModalBtn")];
@@ -237,12 +269,13 @@ function close() {
   });
 }
 function updateGame(newValues, id) {
-  firstTeam = !firstTeam;
   nextWordBtn.addEventListener("click", change);
-  header.innerHTML = `<h2>${firstTeam ? newValues[4] : newValues[5]}</h2>`;
+  header.innerHTML = `<h1>${newValues[4]}</h1>`;
 }
-
 function change() {
+  finishGame(newValues);
+  segundos = 0;
+  firstTeam = !firstTeam;
   let h2 = document.getElementById("timeResult");
   h2.style.display = "none";
   h2.innerText = "";
@@ -262,8 +295,61 @@ function change() {
       btn.style.display = "none";
     }
   });
+  header.innerHTML = `<h1>${firstTeam ? newValues[4] : newValues[5]}</h1`;
 }
 
+function points(newValues) {
+  newValues[0] = pointG1;
+  newValues[1] = pointG2;
+  btnPoint.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (
+        header.innerText == `${newValues[4]}` &&
+        btn.classList.contains("correctBtn")
+      ) {
+        pointG1++;
+        scoreLeft.forEach((p) => {
+          p.innerText = pointG1;
+        });
+        console.log(` ${newValues[4]} obtuvo un punto , ${pointG1}`);
+      } else if (
+        header.innerText == `${newValues[5]}` &&
+        btn.classList.contains("correctBtn")
+      ) {
+        pointG2++;
+        scoreRight.forEach((p) => {
+          p.innerText = pointG2;
+        });
+        console.log(` ${newValues[5]} obtuvo un punto , ${pointG2}`);
+      }
+    });
+  });
+}
+
+function finishGame(newValues) {
+  let game_container = document.getElementById("game_container");
+  let score_view = document.getElementById("score_view");
+  if (pointG1 >= newValues[6]) {
+    score_view.style.display = "none";
+    game_container.innerHTML = `
+    <header>
+        <h1>${newValues[4]} is the winner ${pointG1} points</h1>
+    </header>
+    <img src="./images/winner.gif" alt="Img rules" style="width:50%;height: auto; margin: 20px; border: 3px solid goldenrod;">
+    <button class="reload">reload game</button>
+    `;
+  } else if (pointG2 >= newValues[6]) {
+    score_view.style.display = "none";
+    game_container.innerHTML = `
+    <header>
+        <h1>${newValues[5]} is the winner with ${pointG2} points</h1>
+    </header>
+    <img src="./images/winner.gif" alt="Img rules" style="width:50%;height: auto; margin: 20px; border: 3px solid goldenrod;">
+    <button class="reload">reload game</button>
+    <br>
+    `;
+  }
+}
 //eventos
 start();
 display();
