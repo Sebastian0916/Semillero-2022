@@ -1,6 +1,6 @@
-  // window.localStorage.clear();
+// window.localStorage.clear();
 let tipoLocalStor = "impacto";
-let keyLocalStorage = ""
+let keyLocalStorage = "";
 function impacto() {
   tipoLocalStor = "impacto";
   document.getElementById("tablaUno").style.display = "";
@@ -52,14 +52,14 @@ function Guardar() {
   const codigo = document.getElementById("TxtCodigo").value;
   const descripcion = document.getElementById("TxtDescripcion").value;
   const valor = document.getElementById("TxtValor").value;
-  
+
   let datos = [];
   let dato = {
     codigo: codigo,
     descripcion: descripcion,
     valor: valor,
   };
-  
+
   // const localStorage = window.localStorage;
   keyLocalStorage = "localhost_" + tipoLocalStor;
   datos = JSON.parse(localStorage.getItem(keyLocalStorage)) || [];
@@ -86,7 +86,7 @@ function Guardar() {
   let cantidad = aId.length;
   for (let i = 0; i < cantidad; i++) {
     let fila = document.createElement("tr");
-    fila.setAttribute("dato-id",i);
+    fila.setAttribute("dato-id", i);
     fila.id = i;
     let celdaCodigo = document.createElement("td");
     let nodoCeldaCodigo = document.createTextNode(aId[i].codigo);
@@ -114,24 +114,26 @@ function Guardar() {
 
     tbody.appendChild(fila);
     celdaAccionPen.addEventListener("click", (editar) => {
-      document.getElementById("cuadro").style.display="block"
-      let celda = editar.target.parentNode.parentNode
-      let CeldaEditar = celda.getAttribute("dato-id")
-      Actualizar(CeldaEditar)
+      document.getElementById("cuadro").style.display = "block";
+      let celda = editar.target.parentNode.parentNode;
+      let CeldaEditar = celda.getAttribute("dato-id");
+      Actualizar(CeldaEditar);
     });
     celdaAccionTrash.addEventListener("click", (event) => {
       let row = event.target.parentNode.parentNode;
-      let datoRow = row.getAttribute("dato-id")
+      let datoRow = row.getAttribute("dato-id");
       row.remove();
-      Eliminar(datoRow)
+      Eliminar(datoRow);
     });
   }
 }
 
-console.log(keyLocalStorage)
+console.log(keyLocalStorage);
 function Eliminar(datoId) {
   let datoObjArr = JSON.parse(localStorage.getItem(keyLocalStorage));
-  let datoIndexArr = datoObjArr.findIndex((element) => element.datoId == datoId);
+  let datoIndexArr = datoObjArr.findIndex(
+    (element) => element.datoId == datoId
+  );
   datoObjArr.splice(datoIndexArr, 1);
   let datoJson = JSON.stringify(datoObjArr);
   localStorage.setItem(keyLocalStorage, datoJson);
@@ -139,12 +141,14 @@ function Eliminar(datoId) {
 
 function Actualizar() {
   let datoObjArrEdit = JSON.parse(localStorage.getItem(keyLocalStorage));
-  let datoIndexArrEdit = datoObjArrEdit.findIndex((element) => element.id == id);
-  let dt =  datoObjArrEdit[datoIndexArrEdit];
+  let datoIndexArrEdit = datoObjArrEdit.findIndex(
+    (element) => element.id == id
+  );
+  let dt = datoObjArrEdit[datoIndexArrEdit];
   // dt.codigo = ""
   // dt.descripcion = ""
   // dt.valor = ""
-  console.log(dt)
+  console.log(dt);
   let datoJsonEdit = JSON.stringify(datoObjArrEdit);
   localStorage.setItem(keyLocalStorage, datoJsonEdit);
 }

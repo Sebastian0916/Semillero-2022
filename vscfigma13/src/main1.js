@@ -53,7 +53,7 @@ document.body.addEventListener("click", (e) => {
 });
 moduleBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  createData();
+  eData();
   module.reset();
 });
 function getData() {

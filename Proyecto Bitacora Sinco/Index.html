@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <header id="encabezado">
+            <img src="imagenes/MicrosoftTeams-image (8).png" alt="logo" class="logo-bitakora">
+            <section id="barra-busqueda-header">
+                <h3 class="titulo-barra-navegacion-header">Buscar empleado</h3>
+                <div class="barra-busqueda">
+                    <input type="search" placeholder="JUDAS TADEO - Cod. 26 - (CC - 8451666664)"
+                        id="barra-busqueda-input">
+                    <div class="fondo-icono-busqueda">
+                        <img src="imagenes/icons8-búsqueda.svg" alt="busqueda" class="busqueda">
+                    </div>
+                </div>
+            </section>
+            <section id="quincenal">
+                <div class="nomina">
+                    <h3>Nomina</h3>
+                    <img src="imagenes/icons8-lápiz-16.png" alt="lapiz" class="lapiz-trasladar">
+                    <h3 class="trasladar">Trasladar</h3>
+                </div>
+                <h3 class="expedicion"></h3>
+            </section>
+            <section id="tiempo">
+                <h3 class="tiempo-actual">Tiempo actual: <br> 16/03/2022 - 31/03/2022</h3>
+            </section>
+            <section id="sesion">
+                <img src="imagenes/Captura de pantalla 2022-07-27 201408.png" alt="logo" class="candado">
+                <div class="modulo">
+                    <h3 class="fenix">Fenix</h3>
+                    <h3 class="nombreJefe">Augusto Romero Arango</h3>
+                </div>
+            </section>
+        </header>
+        <aside id="perfil">
+            <div class="fondo-persona">
+                <img src="imagenes/Ribera-Saint_Jude_Thaddée-Rennes,_MBA.jpg" alt="judas" class="judas">
+            </div>
+            <div class="fondo-camara">
+                <img src="imagenes/icons8-cámara-32.png" alt="camara" class="camara">
+            </div>
+            <section id="datos-personal">
+                <div class="datos">
+                    <div>
+                        <div id="nombre">
+                            <h3 class="nombre-empleado"></h3>
+                            <img src="imagenes/icons8-lápiz-16.png" alt="editar" class="lapiz-nombre">
+                        </div>
+                        <h5></h5>
+                        <div>
+                            <div class="labor">
+                                <h3 class="area">Área:</h3>
+                                <h3 class="dato-personal1"></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="identificacion">
+                                <h3 class="numero">Identificacion:</h3>
+                                <h3 class="dato-personal2"></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="fecha">
+                                <h3 class="ingreso">Fecha de ingreso:</h3>
+                                <h3 class="dato-personal3">NONE</h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="correo">
+                                <h3 class="email">Correo:</h3>
+                                <h3 class="dato-personal4"></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="barra-busqueda-inferior">
+                        <div class="menu-gestionar">
+                            <img src="imagenes/icons8-menú.svg" alt="menu" class="menu">
+                            <h4 class="gestionar">Gestionar</h4>
+                        </div>
+                        <div class="barra-busqueda-gestionar">
+                            <input type="search" id="busqueda-gestionar-input"
+                                placeholder="Incapacidad, prima, modificación, salario, etc.">
+                        </div>
+                        <div class="fondo-buscar2">
+                            <img src="imagenes/icons8-búsqueda (1).svg" alt="busqueda" class="buscar">
+                        </div>
+                    </div>
+                </div>
+                <div id="salarioDiv">
+                    <div id="sueldo">
+                        <h3 class="salario">Salario</h3>
+                        <h1 class="pago"></h1>
+                        <h6 class="ordinario"></h6>
+                    </div>
+                    <div>
+                        <div class="total">
+                            <h3 class="valor">Valor Hora:</h3>
+                            <p class="hora1"></p>
+                        </div>
+                    </div>
+                    <div class="horario">
+                        <h3 class="jornada">Jornada:</h3>
+                        <p class="hora2"></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="ultima">
+                        <h3 class="liquidacion">última liquidación</h3>
+                        <img src="imagenes/okOKay.svg" alt="okay" class="chulo">
+                    </div>
+                    <div class="cop">
+                        <h2 class="valor-pagado">COP 866,869</h2>
+                        <img src="imagenes/VectorReiniciar.svg" alt="reiniciar" class="reiniciar">
+                        <h3 class="actualizar">Actualizar</h3>
+                    </div>
+                    <div class="bitacora-liquidacion">
+                        <img src="imagenes/Captura de pantalla 2022-08-02 113816.png" alt="lquidacion"
+                            class="logo-liquidacion">
+                        <h2 class="liquidado">liquidación</h2>
+                        <img src="imagenes/Captura de pantalla 2022-08-02 113839.png" alt="bitacora"
+                            class="logo-bitacora">
+                        <h2 class="bitacora">Bitácora</h2>
+                    </div>
+                </div>
+            </section>
+        </aside>
+        <article id="ocultar-vista">
+            <img src="imagenes/flecha-hacia-abajo (1).png" alt="abajo" class="disminuir abrir" style="display: none;"
+                onclick="mostrar()">
+            <img src="imagenes/punta-de-flecha-hacia-arriba (1).png" alt="arriba" class="elevacion cerrar"
+                onclick="ocultar()">
+            <h4 class="mostrar-perfil abrir" style="display: none;">Mostrar perfil</h4>
+            <h4 class="ocultar-perfil cerrar">Ocultar perfil</h4>
+        </article>
+        <section id="encabezado-bitacora">
+            <h1 class="bitacora-empleado">Bitacora del empleado</h1>
+            <div class="mes-periodo">
+                <h3 class="visializador">Visualizador bitacora por:</h3>
+                <button class="meses">Meses</button>
+                <button class="periodo">Periodo</button>
+            </div>
+            <div class="cambio-mes">
+                <h3 class="mes">Marzo 2022</h3>
+                <button class="anterior"><img src="imagenes/flecha-hacia-atras.png" alt="atras" class="atras"></button>
+                <button class="siguiente"><img src="imagenes/flecha-hacia-abajo (2).png" alt="delante"
+                        class="adelante"></button>
+            </div>
+        </section>
+        <section id="tabla-bitacora">
+            <div class="regla">
+                <h3 class="concepto">Concepto</h3>
+                <h3 class="valor-mensual">Valor mensual</h3>
+                <div class="recta-numeros"></div>
+                <p class="dias">Días</p>
+            </div>
+        </section>
+        
+    </main>
+    <script src="src/vistaPerfil.js"></script>
+    <script src="src/toggle.js"></script>
+    <script src="src/jsonInformacion.js"></script>
+    <script src="src/diasTrabajados.js"></script>
+    <script src="src/pagosDiarios.js"></script>
+</body>
+
+</html>

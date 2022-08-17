@@ -1,0 +1,617 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+}
+#encabezado {
+  display: flex;
+  justify-content: space-between;
+  background-color: #141d29;
+  height: 12vh;
+  width: 99vw;
+}
+.logo-bitakora {
+  height: 6.5vh;
+  width: auto;
+  margin: 12px 0 0 10px;
+}
+#barra-busqueda-header {
+  width: 37vw;
+}
+.titulo-barra-navegacion-header {
+  color: #f1f1f1;
+  font-size: 13px;
+  margin: 13px 0 0 0;
+}
+.barra-busqueda {
+  display: flex;
+  margin-top: 4px;
+  height: 6vh;
+  width: 37vw;
+}
+#barra-busqueda-input {
+  border-radius: 5px 0 0 5px;
+  border: none;
+  outline: none;
+  height: 5vh;
+  width: 35vw;
+  padding-left: 15px;
+}
+.fondo-icono-busqueda {
+  background-color: #8ed243;
+  border-radius: 0 5px 5px 0;
+  height: 5vh;
+}
+.busqueda {
+  width: 3vw;
+  height: 4vh;
+  margin-top: 2px;
+}
+#quincenal {
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  margin: 1.6em 0 0 8em;
+  font-size: 12px;
+  height: 7vh;
+  border-left: solid #39404b 1.5px;
+}
+.nomina {
+  display: flex;
+  margin: 3px 0 0 12px;
+}
+.lapiz-trasladar,
+.trasladar {
+  margin-left: 5px;
+  color: #8ed243;
+}
+.expedicion {
+  margin-left: 10.5px;
+}
+#tiempo {
+  border-left: solid #39404b 1.5px;
+  color: #f1f1f1;
+  margin: 2em 2em 0 0;
+  font-size: 12px;
+  height: 7vh;
+  border-left: solid #39404b 1.5px;
+}
+.tiempo-actual {
+  margin-left: 10px;
+}
+#sesion {
+  display: flex;
+  color: #f1f1f1;
+  margin: 1.6em 1em 0 0;
+  font-size: 12px;
+  height: 7vh;
+  border-left: solid #39404b 1.5px;
+}
+.modulo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.fenix {
+  font-size: 20px;
+}
+#perfil {
+  display: flex;
+  background-color: #e5e9ec;
+  height: 33vh;
+  align-items: center;
+}
+.fondo-persona,
+.judas {
+  border-radius: 100%;
+  width: 7.5vw;
+  height: 15vh;
+  margin: 0 0 20px 40px;
+}
+.fondo-camara {
+  display: flex;
+  position: relative;
+  top: 20px;
+  left: 5px;
+  background-color: #37729f;
+  border-radius: 50%;
+  height: 4vh;
+  width: 2vw;
+}
+.camara {
+  width: 1.5vw;
+  height: 3vh;
+  margin: 4px;
+}
+#datos-personal {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+}
+.datos {
+  margin: 0 0 10px 25px;
+  width: 38vw;
+}
+#nombre {
+  display: flex;
+  font-size: 15px;
+}
+.nombre-empleado {
+  color: #141d29;
+}
+.lapiz-nombre {
+  margin-left: 5px;
+}
+h5 {
+  color: #72757f;
+  font-size: 14px;
+}
+.labor,
+.identificacion,
+.fecha,
+.correo {
+  margin-top: 6px;
+  display: flex;
+  font-size: 12px;
+}
+.area,
+.numero,
+.ingreso,
+.email {
+  color: #5ea3d2;
+}
+.dato-personal1 {
+  color: #72757f;
+  margin-left: 5.5rem;
+  text-align: center;
+}
+.dato-personal2 {
+  color: #72757f;
+  margin-left: 2.2rem;
+  text-align: center;
+}
+.dato-personal3 {
+  color: #72757f;
+  margin-left: 0.9rem;
+  text-align: center;
+}
+.dato-personal4 {
+  color: #72757f;
+  margin-left: 4.6rem;
+  text-align: center;
+}
+.barra-busqueda-inferior {
+  display: flex;
+  margin-top: 10px;
+}
+.menu-gestionar {
+  display: flex;
+  background-color: #f1f1f1;
+  height: 5vh;
+  width: 8vw;
+  border-right: solid #bcbfd0 1.5px;
+  border-radius: 5px 0 0 5px;
+}
+.menu {
+  margin-top: 6px;
+  height: 3vh;
+  width: 3vw;
+}
+.gestionar {
+  margin: 7px 4px 0 0;
+  font-size: 14px;
+}
+#busqueda-gestionar-input {
+  height: 5vh;
+  width: 24vw;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+.fondo-buscar2 {
+  height: 5vh;
+  width: 2.8vw;
+  background-color: #abacad;
+  border-radius: 0 5px 5px 0;
+  opacity: 0.2;
+}
+.buscar {
+  margin: 3px 0 0 4px;
+  width: 2vw;
+  height: 4vh;
+}
+#salarioDiv {
+  margin-left: 2rem;
+  width: 50vw;
+}
+#sueldo {
+  display: flex;
+  flex-direction: column;
+}
+.salario {
+  margin-top: 20px;
+  color: #5ea3d2;
+  font-size: 18px;
+}
+.pago {
+  color: #25394f;
+  font-size: 23px;
+}
+.ordinario {
+  color: #758391;
+  font-size: 12px;
+}
+.total,
+.horario {
+  display: flex;
+  width: 19vw;
+}
+.hora1 {
+  margin-left: 18px;
+  color: #72757f;
+}
+.hora2 {
+  margin-left: 24px;
+  color: #72757f;
+}
+.valor{
+  color: #5ea3d2;
+  margin-top: 2px;
+  font-size: 13px;
+}
+.jornada {
+  color: #5ea3d2;
+  font-size: 15px;
+}
+.ultima {
+  margin-top: 20px;
+  font-size: 18px;
+  display: flex;
+  color: #5ea3d2;
+  justify-content: space-between;
+}
+.liquidacion {
+  font-size: 20px;
+}
+.valor-pagado {
+  color: #25394f;
+  font-size: 23px;
+  width: 10vw;
+}
+.reiniciar {
+  width: 14px;
+  margin-left: 15px;
+}
+.actualizar {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  margin-left: 5px;
+  text-decoration-line: underline;
+  color: #7cd4cd;
+}
+.cop {
+  display: flex;
+}
+.bitacora-liquidacion {
+  display: flex;
+  align-items: center;
+}
+.logo-liquidacion,
+.logo-bitacora {
+  width: 20px;
+  height: 35px;
+  margin-right: 10px;
+}
+.liquidado,
+.bitacora {
+  color: #5f8541;
+  font-size: 20px;
+}
+.logo-bitacora {
+  margin: 0 0 0px 10px;
+}
+#ocultar-vista {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  background-color: #e1e5e8;
+  box-shadow: 0 2px #d8dde0;
+}
+.elevacion,
+.disminuir {
+  color: #8ed243;
+  width: 1.5vw;
+}
+.ocultar-perfil,
+.mostrar-perfil {
+  color: #5f8541;
+  font-size: 12px;
+}
+#encabezado-bitacora {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 5vh;
+  margin-top: 3rem;
+}
+.bitacora-empleado {
+  color: #37729f;
+  font-size: 20px;
+  margin-left: 2em;
+}
+.mes-periodo {
+  display: flex;
+  align-items: center;
+  margin-left: 4rem;
+}
+.visializador {
+  color: #141d29;
+  font-size: 12.5px;
+  margin-right: 5px;
+}
+.meses {
+  border: none;
+  background-color: #8ed243;
+  border-radius: 3px 0 0 3px;
+  color: white;
+  height: 4.5vh;
+  width: 4vw;
+}
+.periodo {
+  border: solid #a9c7dc 1px;
+  color: #5a7eaa;
+  height: 4.5vh;
+  width: 4vw;
+  border-radius: 0 3px 3px 0;
+}
+.cambio-mes {
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+}
+.mes {
+  color: #414c68;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.anterior,
+.siguiente {
+  border: solid 1px #a9c7dc;
+  border-radius: 3px;
+  width: 2vw;
+  height: 5vh;
+  margin-right: 10px;
+}
+.atras,
+.adelante {
+  margin-top: 5px;
+  width: 1.5vw;
+  height: 3vh;
+}
+.anterior:hover,
+.siguiente:hover {
+  background-color: #e8edff;
+}
+.meses.hidden {
+  background-color: white;
+  color: #5a7eaa;
+  border: solid 1px #a9c7dc;
+}
+.periodo.hidden {
+  background-color: #8ed243;
+  color: white;
+  border: none;
+}
+#tabla-bitacora {
+  display: flex;
+  flex-direction: column;
+  width: 93vw;
+  height: 105vh;
+  margin: 2% 0 0 2.8%;
+  background-color: #ffffff;
+  border-radius: 7px;
+}
+.regla {
+  display: flex;
+}
+.concepto,
+.valor-mensual {
+  color: #595959;
+  margin: 15px 0 0 10px;
+  height: 4vh;
+  font-size: 15px;
+}
+.recta-numeros {
+  display: flex;
+  width: 74vw;
+  height: 3vh;
+  margin: 15px 0 0 25px;
+}
+.caja {
+  text-align: center;
+  border-left: solid #abacad 0.5px;
+  border-bottom: solid #abacad 0.5px;
+  border-right: solid #abacad 0.5px;
+  width: 3vw !important;
+}
+.dias {
+  color: #37729f;
+  margin: 15px 0 0 12.5px;
+}
+.valCont {
+  height: 13vh;
+  display: flex;
+}
+.bandera {
+  width: 5vw;
+  height: 9vh;
+  margin: 10px 0 0 10px;
+}
+.spnVal {
+  position: absolute;
+  color: #ffffff;
+  margin: 15px 0 0 23px;
+}
+.h3descrip {
+  position: absolute;
+  margin: 42px 0 0 30px;
+  font-size: 15px;
+  color: #7a7a7d;
+}
+.spanDescrip {
+  position: absolute;
+
+  font-size: 15px;
+  color: #bf9cc6;
+  background-color: #fbe5ff;
+  border-radius: 3px;
+}
+.totalDias {
+  border-radius: 3px;
+  background-color: #9b9b9b;
+  margin: 12px 0 0 10px;
+  width: 2.5vw;
+  height: 4.5vh;
+  padding: 5px 0 0 0;
+  text-align: center;
+  color: #fff;
+}
+.mes-pago {
+  color: #7a7a7d;
+  position: absolute;
+  font-size: 15px;
+  margin: 17px 0 0 25px;
+}
+.fondo1 {
+  width: 8vw;
+  background-color: #eeeeee;
+  height: 4.5vh;
+  margin: 12px 10px 0 0;
+}
+.cuadros-pagos {
+  display: flex;
+  width: 74vw;
+  height: 4.5vh;
+  margin: 12px 0 0 0;
+}
+.cuadroPagos {
+  width: 3vw;
+  text-align: center;
+  background-color: #ebebeb;
+  border-left: white solid 0.5px;
+}
+.valHover {
+  color: #000;
+  font-weight: 900;
+  border-radius: 3px;
+  padding: 3px;
+  font-size: 13px;
+}
+@media only screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .logo-bitakora {
+    width: 14vw;
+  }
+  #barra-busqueda-header {
+    margin-left: 1rem;
+  }
+  .titulo-barra-navegacion-header {
+    font-size: 11px;
+  }
+  .barra-busqueda {
+    width: 30vw;
+  }
+  #barra-busqueda-input {
+    padding-top: 2px;
+    height: 4vh;
+    font-size: 10px;
+  }
+  .fondo-icono-busqueda {
+    width: 6vh;
+    height: 4vh;
+  }
+  .busqueda {
+    margin: 1px 0 0 4px;
+    width: 2vw;
+  }
+  #quincenal {
+    font-size: 9px;
+    position: relative;
+    right: 50px;
+  }
+  .lapiz-trasladar {
+    height: 12px;
+  }
+  #tiempo {
+    font-size: 9px;
+    position: relative;
+    right: 40px;
+  }
+  .tiempo-actual {
+    width: 17vw;
+  }
+  #sesion {
+    font-size: 9px;
+    position: relative;
+    right: 65px;
+  }
+  .modulo {
+    width: 8vw;
+    margin-left: 15px;
+  }
+  .candado {
+    height: 5vh;
+    width: auto;
+  }
+  .fenix {
+    font-size: 15px;
+  }
+  .nombreJefe {
+    width: 13vw;
+    padding: 50xp;
+    text-align: end;
+  }
+  .fondo-persona,.judas{
+    position: relative;
+    right: 20px;
+    width: 12vw;
+  }
+  .fondo-camara{
+    position: relative;
+    left:-28px;
+    width: 4vw;
+    height: 4vw;
+  }
+  .camara{
+    width: 2.5vw;
+    margin:8px 0 10px 6.3px  ;
+  }
+  #datos-personal{
+    position: relative;
+    right: 55px;
+    top: 30px;
+  }
+  .datos {
+    border: solid;
+  }
+  .nombre-empleado{
+    font-size: 13px;
+  }
+
+}
