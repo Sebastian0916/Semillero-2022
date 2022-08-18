@@ -1,41 +1,40 @@
-const datosPagos = document.querySelector(".cuadros-pagos");
 function jsonDatosDePagos() {
   fetch("data/lineas-de-pagos.json")
     .then((respuesta) => {
       return respuesta.json();
     })
     .then((data) => {
-      let coutInMap = 1;
       data.causacionesPorItems.map((obj) => {
         const valNum = parseFloat(obj.totalPorItem.valor)
-        let obs = ""
+        let obsevacionesJson = ""
         let tipoItem = obj.idItem.toUpperCase() + obj.evento.guid.split("-")[0];
         let tipoItemText = obj.idItem.toUpperCase();
         let definicionColor = tipoItemText.indexOf("SAL") >= 0 ? "#447DA9" : tipoItemText.indexOf("TRA") >= 0 ? "#447DA9" : tipoItemText.indexOf("VAC") >= 0 ? "#F3B754" : tipoItemText.indexOf("SEG") >= 0 ? "#F14C60" : "";
 
         const divVal = document.createElement("div");
-        divVal.id = "val" + coutInMap;
+        divVal.id = "val";
         divVal.classList.add("valCont");
 
-        const divValCl = document.createElement("div");
-        divValCl.classList.add("val" + coutInMap);
+        const divClass = document.createElement("div");
+        divClass.classList.add("val" );
 
-        const spnval = document.createElement("span");
-        spnval.classList.add("spnVal");
-        spnval.append(document.createTextNode(tipoItemText));
+        const spnValor = document.createElement("span");
+        spnValor.classList.add("spnVal");
+        spnValor.append(document.createTextNode(tipoItemText));
 
         const h3Val = document.createElement("h3");
         h3Val.classList.add("h3descrip");
         h3Val.append(document.createTextNode(obj.item));
 
         if (obj.observacion != null) {
-          obs = obj.observacion
+          obsevacionesJson = obj.observacion
         }
+
         const spanVal = document.createElement("span");
         spanVal.classList.add("spanDescrip");
-        spanVal.append(document.createTextNode(obs));
-        let lenObs = obj.item.length * 8.5
-        let minMarg = lenObs < 100 ? 100 : lenObs
+        spanVal.append(document.createTextNode(obsevacionesJson));
+        let lengthObservaciones = obj.item.length * 8.5
+        let minMarg = lengthObservaciones < 100 ? 100 : lengthObservaciones
         spanVal.style.marginLeft = minMarg + "px"
         spanVal.style.marginTop = "45px"
 
@@ -44,11 +43,11 @@ function jsonDatosDePagos() {
         imgVal.classList.add("bandera");
         imgVal.style.backgroundColor = definicionColor;
 
-        divValCl.append(spnval)
-        divValCl.append(h3Val)
-        divValCl.append(spanVal)
-        divValCl.append(imgVal)
-        divVal.append(divValCl);
+        divClass.append(spnValor)
+        divClass.append(h3Val)
+        divClass.append(spanVal)
+        divClass.append(imgVal)
+        divVal.append(divClass);
 
         const divValDesc = document.createElement("div");
         divValDesc.classList.add("vrMes");
@@ -57,7 +56,7 @@ function jsonDatosDePagos() {
         h3ValDesc.classList.add("mes-pago");
         const sueldo = obj.totalPorItem.valor.toLocaleString();
         if (valNum < 0) {
-          h3ValDesc.style.color = "#F14C60"
+          h3ValDesc.style.color = definicionColor
         }
         h3ValDesc.append(document.createTextNode(sueldo));
 
@@ -97,18 +96,18 @@ function jsonDatosDePagos() {
             elem.style.cursor = "pointer"
             const imgValChulo = document.createElement("img");
             imgValChulo.src = "imagenes/vector.svg";
-            imgValChulo.style.margin= "8px";
-            
+            imgValChulo.style.margin = "8px";
+
             elem.append(imgValChulo)
             const hoverElm = document.createElement("div")
-            hoverElm.append(document.createTextNode(`$ `+obj.detalles[key].dinero.valor.toLocaleString()))
+            hoverElm.append(document.createTextNode(`$ ` + obj.detalles[key].dinero.valor.toLocaleString()))
             hoverElm.classList.add('valHover')
             hoverElm.style.display = "none"
             hoverElm.style.zIndex = "1"
             hoverElm.style.background = definicionColor
             hoverElm.style.marginTop = "-30px"
             hoverElm.style.position = "absolute"
-            
+
 
             elem.append(hoverElm)
             elem.addEventListener('mouseover', (obja) => {
