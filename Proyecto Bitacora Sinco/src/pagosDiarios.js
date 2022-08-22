@@ -7,8 +7,8 @@ function jsonDatosDePagos() {
       data.causacionesPorItems.map((obj) => {
         const valNum = parseFloat(obj.totalPorItem.valor)
         let obsevacionesJson = ""
-        let tipoItem = obj.idItem.toUpperCase() + obj.evento.guid.split("-")[0];
-        let tipoItemText = obj.idItem.toUpperCase();
+        let tipoItem = obj.idItem + obj.evento.guid.split("-")[0];
+        let tipoItemText = obj.idItem;
         let definicionColor = tipoItemText.indexOf("SAL") >= 0 ? "#447DA9" : tipoItemText.indexOf("TRA") >= 0 ? "#447DA9" : tipoItemText.indexOf("VAC") >= 0 ? "#F3B754" : tipoItemText.indexOf("SEG") >= 0 ? "#F14C60" : "";
 
         const divVal = document.createElement("div");
@@ -16,7 +16,7 @@ function jsonDatosDePagos() {
         divVal.classList.add("valCont");
 
         const divClass = document.createElement("div");
-        divClass.classList.add("val" );
+        divClass.classList.add("val");
 
         const spnValor = document.createElement("span");
         spnValor.classList.add("spnVal");
@@ -83,11 +83,11 @@ function jsonDatosDePagos() {
         for (i = 0; i < lenRec; i++) {
           const cuadroValores = document.createElement('div')
           cuadroValores.classList.add('cuadroPagos')
-          cuadroValores.classList.add('CP' + tipoItem + '_' + (i + 1))
+          cuadroValores.classList.add(tipoItem + '_' + (i + 1))
           divValCuadros.append(cuadroValores)
         }
         for (let key in obj.detalles) {
-          let elem = document.getElementsByClassName('CP' + tipoItem + '_' + key)[0];
+          let elem = document.getElementsByClassName(tipoItem + '_' + key)[0];
           let detalles = obj.detalles[key];
           elem.style.backgroundColor = definicionColor
           if (detalles.estado.descripcion.toUpperCase() == "PAGADO") {
